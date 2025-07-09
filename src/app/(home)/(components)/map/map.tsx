@@ -20,7 +20,7 @@ function Map() {
   }, [])
 
   return (
-    <div className='mt-10 h-[500px] sm:h-[696px]'>
+    <div className='mt-10 h-[500px] sm:h-[614px]'>
       <MapContainer
         className='h-full rounded-md shadow-small'
         center={coords}

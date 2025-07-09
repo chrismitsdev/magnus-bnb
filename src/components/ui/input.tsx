@@ -25,7 +25,7 @@ function Input({
     >
       <input
         className={cn(
-          'py-3.25 w-full text-foreground font-semibold bg-background border border-accent/15 rounded-md outline-0 transition placeholder:text-foreground/50 placeholder:text-sm placeholder:font-normal placeholder:opacity-100 group-focus-within:bg-accent/10 group-focus-within:border-accent',
+          'py-3.25 w-full text-foreground font-semibold bg-background/50 border border-accent/15 rounded-md outline-0 transition placeholder:text-foreground/50 placeholder:text-sm placeholder:font-normal placeholder:opacity-100 group-focus-within:bg-background group-focus-within:border-accent',
           icon ? 'pl-10 pr-4' : 'px-4',
           error && 'border-red-900',
           className

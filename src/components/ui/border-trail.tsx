@@ -25,7 +25,7 @@ function BorderTrail({
   }
 
   return (
-    <div className='pointer-events-none absolute inset-0 rounded-[inherit] border border-transparent [mask-clip:padding-box,border-box] mask-intersect mask-[linear-gradient(transparent,_transparent),_linear-gradient(#000,_#000)]'>
+    <div className='h-full pointer-events-none absolute inset-0 rounded-[inherit] border border-transparent [mask-clip:padding-box,border-box] mask-intersect mask-[linear-gradient(transparent,_transparent),_linear-gradient(#000,_#000)]'>
       <motion.div
         className={cn('absolute aspect-square bg-accent', className)}
         style={{

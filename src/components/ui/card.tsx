@@ -17,8 +17,8 @@ function Card({
       )}
       {...props}
     >
-      {children}
       {borderTrail && <BorderTrail />}
+      {children}
     </div>
   )
 }
@@ -44,7 +44,7 @@ function CardImage({
 function CardBody({className, ...props}: React.ComponentPropsWithRef<'div'>) {
   return (
     <div
-      className={cn('p-4 sm:p-6 space-y-6', className)}
+      className={cn('p-4 space-y-4 sm:p-6 sm:space-y-6', className)}
       {...props}
     />
   )

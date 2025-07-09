@@ -4,96 +4,98 @@ import {
   MailIcon,
   PhoneIcon,
   MessageCircleIcon,
-  SmartphoneIcon
+  SmartphoneIcon,
+  SendHorizonal
 } from 'lucide-react'
 import {Container} from '@/src/components/shared/container'
 import {Section} from '@/src/components/shared/section'
 import {Typography} from '@/src/components/ui/typography'
 import {Input} from '@/src/components/ui/input'
 import {Textarea} from '@/src/components/ui/textarea'
-import {Card, CardBody} from '@/src/components/ui/card'
+import {
+  Card,
+  CardBody,
+  CardTitle,
+  CardDescription
+} from '@/src/components/ui/card'
+import {Button} from '@/src/components/ui/button'
 import {WhatsAppIcon} from '@/src/components/icons/whatsapp'
 
 function HomeContact() {
   return (
     <Container asChild>
-      <Section
-        title='Επικοινωνήστε μαζί μας'
-        description='Είμαστε εδώ για να σας βοηθήσουμε με κάθε ανάγκη διαχείρισης
-      ακινήτου. Είτε είστε ιδιοκτήτης που αναζητά αξιόπιστες υπηρεσίες
-      είτε ενοικιαστής με απορίες, η ομάδα μας είναι έτοιμη να σας
-      εξυπηρετήσει. Επικοινωνήστε μαζί μας σήμερα και ας ξεκινήσουμε τη
-      συζήτηση.'
-      >
-        <div className='mt-10 flex flex-wrap gap-8 xl:flex-nowrap'>
-          <Card
-            className='basis-full order-2 xl:order-1 xl:basis-1/3'
-            borderTrail
-          >
-            <CardBody>
-              <HomeContactLink
-                title='Κινητό τηλέφωνο'
-                description='+30 6973560007'
-                icon={SmartphoneIcon}
-                href='tel:+306973560007'
-              />
-              <HomeContactLink
-                title='Σταθερό τηλέφωνο'
-                description='+30 2551029428'
-                icon={PhoneIcon}
-                href='tel:+302551029428'
-              />
-              <HomeContactLink
-                title='Email'
-                description='bnbmagnus@gmail.com'
-                icon={MailIcon}
-                href='mailto:bnbmagnus@gmail.com'
-              />
-              <HomeContactLink
-                title='WhatsApp'
-                description='Επικοινωνία μέσω WhatsApp'
-                icon={WhatsAppIcon}
-                href='https://wa.me/306973560007'
-                target='_blank'
-                rel='noopener noreferrer'
-              />
-            </CardBody>
-          </Card>
-          <form className='basis-full order-1 xl:basis-2/3'>
-            <div className='space-y-6'>
-              <Input
-                placeholder='Ονοματεπώνυμο'
-                icon={UserIcon}
-              />
-              <Input
-                placeholder='Email'
-                type='email'
-                autoComplete='email'
-                icon={MailIcon}
-              />
-              <Input
-                placeholder='Αριθμός τηλεφώνου'
-                type='tel'
-                autoComplete='email'
-                icon={PhoneIcon}
-              />
-              <Textarea
-                placeholder='Το μήνυμά σας'
-                icon={MessageCircleIcon}
-              />
+      <Section>
+        <Card
+          className='p-0 mx-auto max-w-5xl'
+          borderTrail
+        >
+          <div className='px-4 py-8 space-y-10 sm:px-16 sm:pt-16 sm:pb-10'>
+            <div className='space-y-4'>
+              <CardTitle>Επικοινωνήστε μαζί μας</CardTitle>
+              <CardDescription>
+                Είμαστε εδώ για να σας βοηθήσουμε με κάθε ανάγκη διαχείρισης
+                ακινήτου. Είτε είστε ιδιοκτήτης που αναζητά αξιόπιστες υπηρεσίες
+                είτε ενοικιαστής με απορίες, η ομάδα μας είναι έτοιμη να σας
+                εξυπηρετήσει. <br /> Επικοινωνήστε μαζί μας σήμερα και ας
+                ξεκινήσουμε τη συζήτηση.
+              </CardDescription>
             </div>
-          </form>
-        </div>
+            <form>
+              <div className='space-y-6'>
+                <Input
+                  placeholder='Ονοματεπώνυμο'
+                  icon={UserIcon}
+                />
+                <Input
+                  placeholder='Email'
+                  type='email'
+                  autoComplete='email'
+                  icon={MailIcon}
+                />
+                <Input
+                  placeholder='Αριθμός τηλεφώνου'
+                  type='tel'
+                  autoComplete='email'
+                  icon={PhoneIcon}
+                />
+                <Textarea
+                  placeholder='Το μήνυμά σας'
+                  icon={MessageCircleIcon}
+                />
+                <Button className='w-full sm:w-auto'>
+                  <span>Υποβολή</span>
+                  <SendHorizonal size={20} />
+                </Button>
+              </div>
+            </form>
+          </div>
+
+          <div className='h-px w-full bg-accent/15' />
+
+          <div className='px-4 py-8 sm:px-16 sm:py-10 flex flex-wrap gap-x-10 gap-y-4 lg:flex-nowrap'>
+            <HomeContactLink
+              title='Κινητό τηλέφωνο'
+              description='+30 6973560007'
+              icon={SmartphoneIcon}
+              href='tel:+306973560007'
+            />
+            <HomeContactLink
+              title='Σταθερό τηλέφωνο'
+              description='+30 2551029428'
+              icon={PhoneIcon}
+              href='tel:+302551029428'
+            />
+            <HomeContactLink
+              title='Email'
+              description='bnbmagnus@gmail.com'
+              icon={MailIcon}
+              href='mailto:bnbmagnus@gmail.com'
+            />
+          </div>
+        </Card>
       </Section>
     </Container>
   )
-}
-
-interface HomeContactLinkProps extends React.ComponentPropsWithRef<'a'> {
-  description: string
-  icon: React.ComponentType<
-    React.ComponentPropsWithRef<'svg'> & {size?: number}
-  >
 }
 
 function HomeContactLink({
@@ -101,10 +103,15 @@ function HomeContactLink({
   description,
   icon,
   ...props
-}: HomeContactLinkProps) {
+}: React.ComponentPropsWithRef<'a'> & {
+  description: string
+  icon: React.ComponentType<
+    React.ComponentPropsWithRef<'svg'> & {size?: number}
+  >
+}) {
   return (
     <a
-      className='flex gap-4 rounded-md hover:bg-accent/10 group'
+      className='basis-full flex gap-4 rounded-md hover:bg-accent/10 group'
       {...props}
     >
       <div className='p-5 rounded-md bg-accent/10'>
@@ -119,5 +126,6 @@ function HomeContactLink({
 }
 
 HomeContact.displayName = 'HomeContact'
+HomeContactLink.displayName = 'HomeContactLink'
 
 export {HomeContact}

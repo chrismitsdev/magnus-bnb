@@ -1,0 +1,7 @@
+@theme {
+  --color-background: hsl(0 0% 0%);
+  --color-foreground: hsl(0 0% 100%);
+
+  --color-accent: hsl(45 95% 60%);
+  --color-accent-foreground: var(--color-background);
+}

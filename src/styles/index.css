@@ -1,0 +1,54 @@
+@import 'tailwindcss';
+@import './colors.css';
+@import './shadows.css';
+@import './utilities.css';
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply font-sans font-light bg-background text-foreground/80 selection:bg-accent selection:text-accent-foreground;
+  }
+
+  span,
+  small {
+    @apply block;
+  }
+}
+
+/* Leaflet styling */
+.leaflet-map-pane,
+.leaflet-left,
+.leaflet-control-zoom {
+  z-index: auto !important;
+}
+
+.leaflet-bottom {
+  display: none;
+}
+
+.leaflet-popup-pane {
+  .leaflet-popup-content-wrapper {
+    background-color: var(--color-background);
+    padding: 16px 24px 16px 16px;
+    border-radius: 4px;
+    box-shadow: var(--shadow-small);
+
+    .leaflet-popup-content {
+      width: max-content !important;
+    }
+
+    .leaflet-popup-content,
+    .leaflet-popup-content p {
+      margin: 0;
+    }
+  }
+
+  .leaflet-popup-tip-container {
+    .leaflet-popup-tip {
+      background-color: var(--color-background);
+    }
+  }
+}

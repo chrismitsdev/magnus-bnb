@@ -1,0 +1,4 @@
+@theme {
+  --shadow-small: 0px 0px 8px 1px rgba(250, 201, 56, 0.05);
+  --shadow-medium: 0px 0px 8px 3px rgba(250, 201, 56, 0.05);
+}

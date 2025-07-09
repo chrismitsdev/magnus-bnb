@@ -1,0 +1,5 @@
+export {default as slideShowImage1} from './1.webp'
+export {default as slideShowImage2} from './2.webp'
+export {default as slideShowImage3} from './3.webp'
+export {default as slideShowImage4} from './4.webp'
+export {default as slideShowImage5} from './5.webp'

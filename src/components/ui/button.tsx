@@ -3,7 +3,7 @@ import {LoaderIcon} from 'lucide-react'
 import {cn} from '@/src/lib/utils'
 
 type Variant = 'primary' | 'outline' | 'ghost'
-type Size = 'lg' | 'md' | 'icon-lg' | 'icon-md'
+type Size = 'lg' | 'md' | 'sm' | 'icon-lg' | 'icon-md'
 
 interface ButtonProps extends React.ComponentPropsWithRef<'button'>, AsChild {
   variant?: Variant
@@ -19,13 +19,14 @@ const buttonPropsMap: {
     primary:
       'bg-accent text-accent-foreground border-accent hover:bg-accent/50 hover:border-accent/50',
     outline:
-      'bg-background text-accent border-accent/10 hover:border-accent active:border-accent',
+      'bg-background text-accent border-accent/15 hover:border-accent active:border-accent',
     ghost:
       'bg-background text-foreground/50 border-transparent hover:text-foreground'
   },
   size: {
     lg: 'px-6 py-2 text-lg',
-    md: 'px-4 py-1.5 text-base',
+    md: 'px-4 py-1.75 text-base',
+    sm: 'px-2 py-0.75 text-sm',
     'icon-lg': 'p-2.75',
     'icon-md': 'p-1.75'
   }
@@ -34,6 +35,7 @@ const buttonPropsMap: {
 const loaderSizeMap: Record<Size, number> = {
   lg: 24,
   md: 20,
+  sm: 16,
   'icon-lg': 24,
   'icon-md': 20
 }

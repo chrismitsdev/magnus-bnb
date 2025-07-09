@@ -104,10 +104,10 @@ function HomeContactLink({
 }: HomeContactLinkProps) {
   return (
     <a
-      className='flex gap-4 rounded-md hover:bg-accent/5 group'
+      className='flex gap-4 rounded-md hover:bg-accent/10 group'
       {...props}
     >
-      <div className='p-5 rounded-md bg-accent/5'>
+      <div className='p-5 rounded-md bg-accent/10'>
         {createElement(icon, {size: 24})}
       </div>
       <div className='py-2 pr-2 w-full space-y-1'>

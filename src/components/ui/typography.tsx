@@ -25,7 +25,7 @@ const variantsMap: Record<
   h2: {
     tag: 'h2',
     className:
-      'pt-1.5 pb-2.5 relative z-10 text-foreground text-2xl font-extrabold font-serif before:absolute before:-inset-x-4 before:z-0 before:top-0 before:bottom-0 before:bg-gradient-to-r before:from-accent/10 before:to-transparent sm:before:rounded-s-md sm:text-3xl'
+      'pt-1.5 pb-2.5 relative z-10 text-foreground text-2xl font-extrabold font-serif before:absolute before:-inset-x-4 before:z-0 before:top-0 before:bottom-0 before:bg-gradient-to-r before:from-accent/15 before:to-transparent sm:before:rounded-s-md sm:text-3xl'
   },
   h3: {
     tag: 'h3',

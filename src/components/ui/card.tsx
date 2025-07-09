@@ -12,7 +12,7 @@ function Card({
   return (
     <div
       className={cn(
-        'relative overflow-hidden bg-accent/5 border border-accent/10 rounded-md shadow-small',
+        'relative overflow-hidden bg-accent/10 border border-accent/15 rounded-md shadow-small',
         className
       )}
       {...props}
@@ -70,7 +70,6 @@ function CardDescription({
 }: React.ComponentPropsWithRef<typeof Typography>) {
   return (
     <Typography
-      className='leading-6'
       variant={variant}
       {...props}
     />

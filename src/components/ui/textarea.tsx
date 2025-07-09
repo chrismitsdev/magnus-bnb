@@ -25,7 +25,7 @@ function Textarea({
     >
       <textarea
         className={cn(
-          'py-3.25 w-full text-foreground font-semibold bg-background border border-accent/10 rounded-md outline-0 transition resize-none placeholder:text-foreground/50 placeholder:text-sm placeholder:font-light placeholder:opacity-100 group-focus-within:bg-accent/5',
+          'py-3.25 w-full text-foreground font-semibold bg-background border border-accent/15 rounded-md outline-0 transition resize-none placeholder:text-foreground/50 placeholder:text-sm placeholder:font-light placeholder:opacity-100 group-focus-within:bg-accent/10 group-focus-within:border-accent',
           icon ? 'pl-10 pr-4' : 'px-4',
           error && 'border-red-900',
           className

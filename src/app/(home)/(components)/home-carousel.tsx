@@ -16,7 +16,7 @@ import * as carouselImages from '@/public/images/carousel'
 function HomeCarousel() {
   return (
     <Carousel
-      className='border-b-2 border-b-accent/10 h-[calc(100svh-146px)]'
+      className='border-b-2 border-b-accent/15 h-[calc(100svh-194px)]'
       plugins={[Autoplay()]}
       asChild
     >

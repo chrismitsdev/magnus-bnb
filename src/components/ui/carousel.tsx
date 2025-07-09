@@ -221,7 +221,7 @@ function CarouselDots({
           <button
             key={index}
             className={cn(
-              'w-6 h-6 flex items-center justify-center bg-background border border-accent/10 rounded-full transition before:absolute before:w-2.5 before:h-2.5 before:bg-accent before:rounded-full before:scale-0 before:transition before:duration-300 hover:border-accent active:border-accent',
+              'w-6 h-6 flex items-center justify-center bg-background border border-accent/15 rounded-full transition before:absolute before:w-2.5 before:h-2.5 before:bg-accent before:rounded-full before:scale-0 before:transition before:duration-300 hover:border-accent active:border-accent',
               selectedIndex === index && 'border-accent before:scale-100'
             )}
             aria-label={`Go to slide ${index + 1}`}

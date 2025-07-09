@@ -1,31 +1,32 @@
 import Link from 'next/link'
-import {FacebookIcon, InstagramIcon, HeartIcon} from 'lucide-react'
+import {FacebookIcon, InstagramIcon, HeartIcon, MapIcon} from 'lucide-react'
 import {Container} from '@/src/components/shared/container'
 import {Typography} from '@/src/components/ui/typography'
 import {Button} from '@/src/components/ui/button'
+import {WhatsAppIcon} from '@/src/components/icons/whatsapp'
 
 function Footer() {
   return (
-    <footer className='py-12 bg-background border-t-2 border-t-accent/10'>
+    <footer className='py-12 bg-background border-t-2 border-t-accent/15'>
       <Container>
         <div className='flex items-center flex-col gap-y-4'>
           <div className='flex items-center gap-4'>
             <Button
               variant='ghost'
-              size='md'
+              size='sm'
               asChild
             >
               <Link href='/privacy-policy'>Πολιτική Απορρήτου</Link>
             </Button>
             <Button
               variant='ghost'
-              size='md'
+              size='sm'
               asChild
             >
               <Link href='/terms-of-service'>Όροι Χρήσης</Link>
             </Button>
           </div>
-          <div className='space-x-6'>
+          <div className='space-x-2'>
             <Button
               variant='ghost'
               size='icon-md'
@@ -48,6 +49,32 @@ function Footer() {
                 target='_blank'
               >
                 <InstagramIcon />
+              </a>
+            </Button>
+            <Button
+              variant='ghost'
+              size='icon-md'
+              asChild
+            >
+              <a
+                href='https://wa.me/306973560007'
+                target='_blank'
+                rel='noopener noreferrer'
+              >
+                <WhatsAppIcon />
+              </a>
+            </Button>
+            <Button
+              variant='ghost'
+              size='icon-md'
+              asChild
+            >
+              <a
+                href='https://www.google.com/maps?q=Dikastirion+33,+Alexandroupoli+681+00'
+                target='_blank'
+                rel='noopener noreferrer'
+              >
+                <MapIcon />
               </a>
             </Button>
           </div>

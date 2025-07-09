@@ -15,14 +15,14 @@ function Footer() {
               size='md'
               asChild
             >
-              <Link href='/privacy-policy'>Privacy Policy</Link>
+              <Link href='/privacy-policy'>Πολιτική Απορρήτου</Link>
             </Button>
             <Button
               variant='ghost'
               size='md'
               asChild
             >
-              <Link href='/terms-of-service'>Terms of Service</Link>
+              <Link href='/terms-of-service'>Όροι Χρήσης</Link>
             </Button>
           </div>
           <div className='space-x-6'>

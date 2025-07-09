@@ -15,22 +15,31 @@ export default function PrivacyPolicyPage() {
           <div className='space-y-2'>
             <Typography variant='h4'>Δεδομένα που Συλλέγουμε:</Typography>
             <ul className='space-y-2.5'>
-              <li className='flex items-center gap-1.5 -ml-1.5'>
-                <DotIcon size={16} />
+              <li className='flex -ml-3'>
+                <DotIcon
+                  className='shrink-0'
+                  size={32}
+                />
                 <Typography>
                   Στοιχεία επικοινωνίας που μας παρέχετε μέσω των φορμών (όνομα,
                   email, αριθμός τηλεφώνου)
                 </Typography>
               </li>
-              <li className='flex items-center gap-1.5 -ml-1.5'>
-                <DotIcon size={16} />
+              <li className='flex -ml-3'>
+                <DotIcon
+                  className='shrink-0'
+                  size={32}
+                />
                 <Typography>
                   Πληροφορίες που σχετίζονται με ερωτήματα ή αιτήματα για
                   υπηρεσίες
                 </Typography>
               </li>
-              <li className='flex items-center gap-1.5 -ml-1.5'>
-                <DotIcon size={16} />
+              <li className='flex -ml-3'>
+                <DotIcon
+                  className='shrink-0'
+                  size={32}
+                />
                 <Typography>
                   Δεδομένα χρήσης του ιστότοπου που συλλέγονται μέσω cookies και
                   εργαλείων ανάλυσης
@@ -45,22 +54,31 @@ export default function PrivacyPolicyPage() {
             </Typography>
             <Typography>Χρησιμοποιούμε τις πληροφορίες σας για να:</Typography>
             <ul className='space-y-2.5'>
-              <li className='flex items-center gap-1.5 -ml-1.5'>
-                <DotIcon size={16} />
+              <li className='flex -ml-3'>
+                <DotIcon
+                  className='shrink-0'
+                  size={32}
+                />
                 <Typography>
                   Απαντούμε στα ερωτήματά σας και παρέχουμε τις αιτούμενες
                   υπηρεσίες
                 </Typography>
               </li>
-              <li className='flex items-center gap-1.5 -ml-1.5'>
-                <DotIcon size={16} />
+              <li className='flex -ml-3'>
+                <DotIcon
+                  className='shrink-0'
+                  size={32}
+                />
                 <Typography>
                   Βελτιώνουμε τον ιστότοπο και τη συνολική εμπειρία των πελατών
                   μας
                 </Typography>
               </li>
-              <li className='flex items-center gap-1.5 -ml-1.5'>
-                <DotIcon size={16} />
+              <li className='flex -ml-3'>
+                <DotIcon
+                  className='shrink-0'
+                  size={32}
+                />
                 <Typography>
                   Επικοινωνούμε σημαντικές ενημερώσεις ή προσφορές, όταν είναι
                   απαραίτητο

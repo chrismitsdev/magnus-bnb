@@ -76,7 +76,7 @@ export default function TermsOfServicePage() {
             <Typography variant='h4'>Στοιχεία Επικοινωνίας:</Typography>
             <Typography>
               Για οποιαδήποτε ερώτηση σχετικά με τους Όρους Χρήσης, παρακαλούμε
-              επικοινωνήστε μαζί μας στο {'{email}'}.
+              επικοινωνήστε μαζί μας στο bnbmagnus@gmail.com.
             </Typography>
           </div>
         </div>

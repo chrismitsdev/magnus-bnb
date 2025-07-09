@@ -119,7 +119,7 @@ export default function PrivacyPolicyPage() {
             <Typography variant='h4'>Επικοινωνήστε Μαζί μας:</Typography>
             <Typography>
               Αν έχετε οποιαδήποτε απορία σχετικά με την Πολιτική Απορρήτου,
-              παρακαλούμε επικοινωνήστε μαζί μας στο {'{email}'}.
+              παρακαλούμε επικοινωνήστε μαζί μας στο bnbmagnus@gmail.com.
             </Typography>
           </div>
         </div>

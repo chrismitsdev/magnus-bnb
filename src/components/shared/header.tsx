@@ -11,7 +11,7 @@ function Header() {
           <Image
             className='mx-auto w-auto h-24'
             src={logo}
-            alt='Magnus logo'
+            alt='MagnusBnB brand logo'
             priority
           />
         </Link>

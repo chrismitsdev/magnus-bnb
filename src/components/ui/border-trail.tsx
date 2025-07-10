@@ -13,7 +13,7 @@ interface BorderTrailProps {
 
 function BorderTrail({
   className,
-  size = 100,
+  size = 200,
   transition,
   onAnimationComplete,
   style

@@ -8,8 +8,8 @@ import {WhatsAppIcon} from '@/src/components/icons/whatsapp'
 function HomeSocial() {
   return (
     <Container asChild>
-      <Section>
-        <div className='grid gap-4 sm:grid-cols-3 sm:gap-8'>
+      <Section className='pb-0'>
+        <div className='grid gap-4 grid-cols-3 sm:gap-8'>
           <SocialLink
             icon={FacebookIcon}
             title='Facebook'
@@ -50,10 +50,10 @@ function SocialLink({
       className='p-4 flex flex-col items-center gap-2 bg-accent/10 border border-accent/15 rounded-md shadow-small transition hover:bg-accent/15 active:scale-95 sm:p-6 sm:gap-4'
       {...props}
     >
-      {createElement(icon, {className: 'size-10 sm:size-20'})}
+      {createElement(icon, {className: 'size-8 sm:size-20'})}
       <Typography
         variant='lead'
-        className='select-none'
+        className='text-base select-none sm:text-lg'
       >
         {title}
       </Typography>

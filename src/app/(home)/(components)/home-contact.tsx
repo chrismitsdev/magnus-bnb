@@ -111,19 +111,45 @@ function HomeContactLink({
 }) {
   return (
     <a
-      className='basis-full flex gap-4 rounded-md hover:bg-accent/10 group'
+      className='basis-full flex bg-background/50 border border-accent/15 rounded-md hover:bg-background'
       {...props}
     >
-      <div className='p-5 rounded-md bg-accent/10'>
-        {createElement(icon, {size: 24})}
-      </div>
-      <div className='py-2 pr-2 w-full space-y-1'>
+      <span className='p-5'>{createElement(icon, {size: 24})}</span>
+      <div className='shrink-0 h-full w-px bg-accent/15' />
+      <div className='py-2 pr-2 pl-4 w-full space-y-1'>
         <Typography variant='large'>{title}</Typography>
         <Typography variant='small'>{description}</Typography>
       </div>
     </a>
   )
 }
+
+// function HomeContactLink({
+//   title,
+//   description,
+//   icon,
+//   ...props
+// }: React.ComponentPropsWithRef<'a'> & {
+//   description: string
+//   icon: React.ComponentType<
+//     React.ComponentPropsWithRef<'svg'> & {size?: number}
+//   >
+// }) {
+//   return (
+//     <a
+//       className='basis-full flex gap-4 rounded-md hover:bg-accent/10 group'
+//       {...props}
+//     >
+//       <div className='p-5 rounded-md bg-accent/10'>
+//         {createElement(icon, {size: 24})}
+//       </div>
+//       <div className='py-2 pr-2 w-full space-y-1'>
+//         <Typography variant='large'>{title}</Typography>
+//         <Typography variant='small'>{description}</Typography>
+//       </div>
+//     </a>
+//   )
+// }
 
 HomeContact.displayName = 'HomeContact'
 HomeContactLink.displayName = 'HomeContactLink'

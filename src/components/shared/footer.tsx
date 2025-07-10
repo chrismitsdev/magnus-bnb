@@ -7,7 +7,7 @@ import {WhatsAppIcon} from '@/src/components/icons/whatsapp'
 
 function Footer() {
   return (
-    <footer className='py-12 bg-background border-t-2 border-t-accent/15'>
+    <footer className='py-12 relative bg-background border-t-2 border-t-accent/15 before:absolute before:inset-0 before:bg-gradient-to-t before:from-accent/15 before:to-transparent'>
       <Container>
         <div className='flex items-center flex-col gap-y-4'>
           <div className='flex items-center gap-4'>

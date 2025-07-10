@@ -20,8 +20,7 @@ const buttonPropsMap: {
       'bg-accent text-accent-foreground border-accent hover:bg-accent/50 hover:border-accent/50',
     outline:
       'bg-background text-accent border-accent/15 hover:border-accent active:border-accent',
-    ghost:
-      'bg-background text-foreground/50 border-transparent hover:text-foreground'
+    ghost: 'text-foreground/50 border-transparent hover:text-foreground'
   },
   size: {
     lg: 'px-6 py-2 text-lg',

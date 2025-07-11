@@ -1,7 +1,15 @@
-export {default as slideShowImage1} from './1.webp'
-export {default as slideShowImage2} from './2.webp'
-export {default as slideShowImage3} from './3.webp'
-export {default as slideShowImage4} from './4.webp'
-export {default as slideShowImage5} from './5.webp'
-export {default as slideShowImage6} from './6.webp'
-export {default as slideShowImage7} from './owner.webp'
+import slideShowImage1 from './1.webp'
+import slideShowImage2 from './2.webp'
+import slideShowImage3 from './3.webp'
+import slideShowImage4 from './4.webp'
+import slideShowImage5 from './5.webp'
+import ownerImage from './owner.webp'
+
+export const carouselImageList = [
+  slideShowImage1,
+  slideShowImage2,
+  slideShowImage3,
+  slideShowImage4,
+  slideShowImage5,
+  ownerImage
+]

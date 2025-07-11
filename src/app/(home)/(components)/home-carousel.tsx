@@ -2,6 +2,7 @@
 
 import Image from 'next/image'
 import Autoplay from 'embla-carousel-autoplay'
+import {cn} from '@/src/lib/utils'
 import {
   Carousel,
   CarouselViewport,
@@ -11,7 +12,7 @@ import {
   CarouselButtonNext,
   CarouselDots
 } from '@/src/components/ui/carousel'
-import * as carouselImages from '@/public/images/carousel'
+import {carouselImageList} from '@/public/images/carousel'
 
 function HomeCarousel() {
   return (
@@ -23,70 +24,24 @@ function HomeCarousel() {
       <section>
         <CarouselViewport>
           <CarouselSlidesContainer>
-            <CarouselSlide>
-              <Image
-                className='w-full h-full object-contain'
-                src={carouselImages.slideShowImage1}
-                alt='Home page carosuel image 1'
-                placeholder='blur'
-                sizes='100vw'
-                priority
-              />
-            </CarouselSlide>
-            <CarouselSlide>
-              <Image
-                className='w-full h-full object-contain'
-                src={carouselImages.slideShowImage2}
-                alt='Home page carosuel image 2'
-                placeholder='blur'
-                sizes='100vw'
-              />
-            </CarouselSlide>
-            <CarouselSlide>
-              <Image
-                className='w-full h-full object-contain'
-                src={carouselImages.slideShowImage3}
-                alt='Home page carosuel image 3'
-                placeholder='blur'
-                sizes='100vw'
-              />
-            </CarouselSlide>
-            <CarouselSlide>
-              <Image
-                className='w-full h-full object-contain'
-                src={carouselImages.slideShowImage4}
-                alt='Home page carosuel image 4'
-                placeholder='blur'
-                sizes='100vw'
-              />
-            </CarouselSlide>
-            <CarouselSlide>
-              <Image
-                className='w-full h-full object-contain'
-                src={carouselImages.slideShowImage5}
-                alt='Home page carosuel image 5'
-                placeholder='blur'
-                sizes='100vw'
-              />
-            </CarouselSlide>
-            <CarouselSlide>
-              <Image
-                className='w-full h-full object-contain'
-                src={carouselImages.slideShowImage6}
-                alt='Home page carosuel image 6'
-                placeholder='blur'
-                sizes='100vw'
-              />
-            </CarouselSlide>
-            <CarouselSlide>
-              <Image
-                className='w-full h-full max-h-[260px] object-contain object-[center_16px] sm:max-h-max sm:object-[center_64px]'
-                src={carouselImages.slideShowImage7}
-                alt='Home page carosuel image 6'
-                placeholder='blur'
-                sizes='100vw'
-              />
-            </CarouselSlide>
+            {carouselImageList.map(function (image, i, a) {
+              return (
+                <CarouselSlide key={image.src}>
+                  <Image
+                    className={cn(
+                      'w-full h-full object-contain',
+                      i === a.length - 1 &&
+                        'max-h-[260px] object-[center_16px] sm:max-h-max sm:object-[center_64px]'
+                    )}
+                    src={image}
+                    alt={`Home page carousel image ${i + 1}`}
+                    placeholder='blur'
+                    sizes='100vw'
+                    priority={i === 0}
+                  />
+                </CarouselSlide>
+              )
+            })}
           </CarouselSlidesContainer>
         </CarouselViewport>
         <CarouselButtonPrev />

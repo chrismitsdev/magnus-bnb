@@ -11,8 +11,8 @@ import {
 import * as servicesImages from '@/public/images/services'
 
 const variants = {
-  hidden: {opacity: 0, filter: 'blur(2px)', scale: 0.95},
-  visible: {opacity: 1, filter: 'blur(0px)', scale: 1}
+  hidden: {y: 80, opacity: 0},
+  visible: {y: 0, opacity: 1}
 }
 
 function HomeServices() {
@@ -24,11 +24,8 @@ function HomeServices() {
       >
         <div className='mt-10 flex flex-wrap gap-8 xl:flex-nowrap'>
           <InView
-            variants={{
-              hidden: {...variants.hidden, x: -80},
-              visible: {...variants.visible, x: 0}
-            }}
-            viewOptions={{margin: '0px 0px -150px 0px'}}
+            variants={variants}
+            viewOptions={{margin: '0px 0px -300px 0px'}}
             transition={{duration: 0.3, ease: 'easeInOut'}}
             once
           >
@@ -53,11 +50,8 @@ function HomeServices() {
           </InView>
 
           <InView
-            variants={{
-              hidden: {...variants.hidden, y: 80},
-              visible: {...variants.visible, y: 0}
-            }}
-            viewOptions={{margin: '0px 0px -150px 0px'}}
+            variants={variants}
+            viewOptions={{margin: '0px 0px -300px 0px'}}
             transition={{duration: 0.3, ease: 'easeInOut'}}
             once
           >
@@ -82,11 +76,8 @@ function HomeServices() {
           </InView>
 
           <InView
-            variants={{
-              hidden: {...variants.hidden, x: 80},
-              visible: {...variants.visible, x: 0}
-            }}
-            viewOptions={{margin: '0px 0px -150px 0px'}}
+            variants={variants}
+            viewOptions={{margin: '0px 0px -300px 0px'}}
             transition={{duration: 0.3, ease: 'easeInOut'}}
             once
           >

@@ -9,7 +9,7 @@
   }
 
   body {
-    @apply font-sans font-light bg-background text-foreground/80 selection:bg-accent selection:text-accent-foreground;
+    @apply font-sans font-light bg-background text-foreground/75 selection:bg-accent selection:text-accent-foreground;
   }
 
   span,

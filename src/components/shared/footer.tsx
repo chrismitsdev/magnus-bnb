@@ -9,7 +9,7 @@ function Footer() {
   return (
     <footer className='py-12 relative bg-background border-t-2 border-t-accent/15 before:absolute before:inset-0 before:bg-gradient-to-t before:from-accent/15 before:to-transparent'>
       <Container>
-        <div className='flex items-center flex-col gap-y-4'>
+        <div className='flex items-center flex-col gap-y-8'>
           <div className='flex items-center gap-4'>
             <Button
               variant='ghost'
@@ -23,7 +23,7 @@ function Footer() {
               size='sm'
               asChild
             >
-              <Link href='/terms-of-service'>Όροι Χρήσης</Link>
+              <Link href='/terms-of-service'>Όροι Παροχής Υπηρεσιών</Link>
             </Button>
           </div>
           <div className='space-x-2'>

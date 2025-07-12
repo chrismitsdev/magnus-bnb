@@ -6,7 +6,7 @@ export default function TermsOfServicePage() {
   return (
     <Container>
       <Section
-        title='Όροι Χρήσης'
+        title='Όροι Παροχής Υπηρεσιών'
         description={
           <>
             Καλώς ήρθατε στη MagnusBnB. Με την πρόσβαση ή τη χρήση του ιστότοπου

@@ -10,7 +10,7 @@ function Footer() {
     <footer className='py-12 relative bg-background border-t-2 border-t-accent/15 before:absolute before:inset-0 before:bg-gradient-to-t before:from-accent/15 before:to-transparent'>
       <Container>
         <div className='flex items-center flex-col gap-y-8'>
-          <div className='flex items-center gap-4'>
+          <div className='flex flex-wrap items-center justify-center gap-4'>
             <Button
               variant='ghost'
               size='sm'

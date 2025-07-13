@@ -5,8 +5,9 @@
 @import './utilities.css';
 
 @layer base {
-  html {
-    @apply scroll-smooth;
+  html,
+  body {
+    touch-action: manipulation;
   }
 
   body {

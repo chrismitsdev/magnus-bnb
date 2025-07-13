@@ -25,7 +25,7 @@ function HomeServices() {
         <div className='mt-10 flex flex-wrap gap-8 xl:flex-nowrap'>
           <InView
             variants={variants}
-            viewOptions={{margin: '0px 0px -300px 0px'}}
+            viewOptions={{margin: '0px 0px -50px 0px'}}
             transition={{duration: 0.75, ease: 'easeInOut'}}
             once
           >
@@ -48,7 +48,7 @@ function HomeServices() {
 
           <InView
             variants={variants}
-            viewOptions={{margin: '0px 0px -300px 0px'}}
+            viewOptions={{margin: '0px 0px -50px 0px'}}
             transition={{duration: 0.75, ease: 'easeInOut'}}
             once
           >
@@ -71,7 +71,7 @@ function HomeServices() {
 
           <InView
             variants={variants}
-            viewOptions={{margin: '0px 0px -300px 0px'}}
+            viewOptions={{margin: '0px 0px -50px 0px'}}
             transition={{duration: 0.75, ease: 'easeInOut'}}
             once
           >

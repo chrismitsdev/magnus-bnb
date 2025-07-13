@@ -7,8 +7,8 @@ import {WhatsAppIcon} from '@/src/components/icons/whatsapp'
 import {InView} from '@/src/components/ui/in-view'
 
 const variants = {
-  hidden: {y: 80, opacity: 0, filter: 'blur(2px)', scale: 0.95},
-  visible: {y: 0, opacity: 1, filter: 'blur(0px)', scale: 1}
+  hidden: {y: 80, opacity: 0},
+  visible: {y: 0, opacity: 1}
 }
 
 function HomeSocial() {
@@ -19,7 +19,7 @@ function HomeSocial() {
           <InView
             variants={variants}
             viewOptions={{margin: '0px 0px -50px 0px'}}
-            transition={{duration: 0.3, ease: 'easeInOut'}}
+            transition={{duration: 0.75, ease: 'easeOut'}}
             once
           >
             <SocialLink
@@ -32,7 +32,7 @@ function HomeSocial() {
           <InView
             variants={variants}
             viewOptions={{margin: '0px 0px -50px 0px'}}
-            transition={{duration: 0.3, ease: 'easeInOut', delay: 0.1}}
+            transition={{duration: 0.75, ease: 'easeOut', delay: 0.1}}
             once
           >
             <SocialLink
@@ -45,7 +45,7 @@ function HomeSocial() {
           <InView
             variants={variants}
             viewOptions={{margin: '0px 0px -50px 0px'}}
-            transition={{duration: 0.3, ease: 'easeInOut', delay: 0.2}}
+            transition={{duration: 0.75, ease: 'easeOut', delay: 0.2}}
             once
           >
             <SocialLink

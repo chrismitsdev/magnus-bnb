@@ -26,7 +26,7 @@ function HomeServices() {
           <InView
             variants={variants}
             viewOptions={{margin: '0px 0px -300px 0px'}}
-            transition={{duration: 0.3, ease: 'easeInOut'}}
+            transition={{duration: 0.75, ease: 'easeInOut'}}
             once
           >
             <Card className='basis-full'>
@@ -49,7 +49,7 @@ function HomeServices() {
           <InView
             variants={variants}
             viewOptions={{margin: '0px 0px -300px 0px'}}
-            transition={{duration: 0.3, ease: 'easeInOut'}}
+            transition={{duration: 0.75, ease: 'easeInOut'}}
             once
           >
             <Card className='basis-full'>
@@ -72,7 +72,7 @@ function HomeServices() {
           <InView
             variants={variants}
             viewOptions={{margin: '0px 0px -300px 0px'}}
-            transition={{duration: 0.3, ease: 'easeInOut'}}
+            transition={{duration: 0.75, ease: 'easeInOut'}}
             once
           >
             <Card className='basis-full'>

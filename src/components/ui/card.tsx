@@ -6,18 +6,17 @@ import {BorderTrail} from '@/src/components/ui/border-trail'
 function Card({
   className,
   children,
-  borderTrail,
   ...props
-}: React.ComponentPropsWithRef<'div'> & {borderTrail?: boolean}) {
+}: React.ComponentPropsWithRef<'div'>) {
   return (
     <div
       className={cn(
-        'relative bg-accent/10 border border-accent/15 rounded-md shadow-small',
+        'relative overflow-hidden bg-accent/10 border border-accent/15 rounded-md shadow-small',
         className
       )}
       {...props}
     >
-      {borderTrail && <BorderTrail />}
+      <BorderTrail />
       {children}
     </div>
   )
@@ -29,7 +28,7 @@ function CardImage({
   ...props
 }: React.ComponentPropsWithRef<typeof Image>) {
   return (
-    <div className='h-96 rounded-t-md overflow-hidden'>
+    <div className='h-70 sm:h-96'>
       <Image
         className='w-full h-full object-cover'
         src={src}

@@ -29,10 +29,7 @@ function HomeServices() {
             transition={{duration: 0.3, ease: 'easeInOut'}}
             once
           >
-            <Card
-              className='basis-full'
-              borderTrail
-            >
+            <Card className='basis-full'>
               <CardImage
                 src={servicesImages.professionalismImage}
                 alt='Professionalism card image'
@@ -55,10 +52,7 @@ function HomeServices() {
             transition={{duration: 0.3, ease: 'easeInOut'}}
             once
           >
-            <Card
-              className='basis-full'
-              borderTrail
-            >
+            <Card className='basis-full'>
               <CardImage
                 src={servicesImages.trustImage}
                 alt='Trust card image'
@@ -81,10 +75,7 @@ function HomeServices() {
             transition={{duration: 0.3, ease: 'easeInOut'}}
             once
           >
-            <Card
-              className='basis-full'
-              borderTrail
-            >
+            <Card className='basis-full'>
               <CardImage
                 src={servicesImages.experienceImage}
                 alt='Experience card image'

@@ -1,0 +1,25 @@
+@theme {
+  --ease-open: cubic-bezier(0.25, 1, 0.5, 1);
+  --ease-close: cubic-bezier(0.5, 0, 0.75, 0);
+
+  --animate-collapsible-open: collapsible-open 350ms var(--ease-open);
+  --animate-collapsible-close: collapsible-close 350ms var(--ease-close);
+
+  @keyframes collapsible-open {
+    from {
+      height: 0;
+    }
+    to {
+      height: var(--radix-collapsible-content-height);
+    }
+  }
+
+  @keyframes collapsible-close {
+    from {
+      height: var(--radix-collapsible-content-height);
+    }
+    to {
+      height: 0;
+    }
+  }
+}

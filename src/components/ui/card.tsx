@@ -12,7 +12,7 @@ function Card({
   return (
     <div
       className={cn(
-        'relative overflow-hidden bg-accent/10 border border-accent/15 rounded-md shadow-small',
+        'relative bg-accent/10 border border-accent/15 rounded-md shadow-small',
         className
       )}
       {...props}
@@ -29,7 +29,7 @@ function CardImage({
   ...props
 }: React.ComponentPropsWithRef<typeof Image>) {
   return (
-    <div className='h-72 sm:h-96'>
+    <div className='h-96 rounded-t-md overflow-hidden'>
       <Image
         className='w-full h-full object-cover'
         src={src}

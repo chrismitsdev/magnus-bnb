@@ -11,6 +11,7 @@
   },
   "devDependencies": {
     "@adamscybot/react-leaflet-component-marker": "^2.0.3",
+    "@radix-ui/react-collapsible": "^1.1.11",
     "@radix-ui/react-slot": "1.2.3",
     "@tailwindcss/postcss": "4.1.11",
     "@types/leaflet": "^1.9.20",

@@ -1,14 +1,13 @@
-import {cn} from '@/src/lib/utils'
 import Image from 'next/image'
+import {cn} from '@/src/lib/utils'
 import {Typography} from '@/src/components/ui/typography'
 import {BorderTrail} from '@/src/components/ui/border-trail'
 
 function Card({
   className,
   children,
-  borderTrail,
   ...props
-}: React.ComponentPropsWithRef<'div'> & {borderTrail?: boolean}) {
+}: React.ComponentPropsWithRef<'div'>) {
   return (
     <div
       className={cn(
@@ -17,20 +16,19 @@ function Card({
       )}
       {...props}
     >
-      {borderTrail && <BorderTrail />}
+      <BorderTrail />
       {children}
     </div>
   )
 }
 
 function CardImage({
-  className,
   src,
   placeholder = 'blur',
   ...props
 }: React.ComponentPropsWithRef<typeof Image>) {
   return (
-    <div className='h-96'>
+    <div className='h-70 sm:h-96'>
       <Image
         className='w-full h-full object-cover'
         src={src}
@@ -51,7 +49,6 @@ function CardBody({className, ...props}: React.ComponentPropsWithRef<'div'>) {
 }
 
 function CardTitle({
-  className,
   variant = 'h4',
   ...props
 }: React.ComponentPropsWithRef<typeof Typography>) {
@@ -64,7 +61,6 @@ function CardTitle({
 }
 
 function CardDescription({
-  className,
   variant = 'p',
   ...props
 }: React.ComponentPropsWithRef<typeof Typography>) {

@@ -4,31 +4,58 @@ import {Container} from '@/src/components/shared/container'
 import {Section} from '@/src/components/shared/section'
 import {Typography} from '@/src/components/ui/typography'
 import {WhatsAppIcon} from '@/src/components/icons/whatsapp'
+import {InView} from '@/src/components/ui/in-view'
+
+const variants = {
+  hidden: {y: 80, opacity: 0},
+  visible: {y: 0, opacity: 1}
+}
 
 function HomeSocial() {
   return (
     <Container asChild>
       <Section className='pb-0'>
         <div className='grid gap-4 grid-cols-3 sm:gap-8'>
-          <SocialLink
-            icon={FacebookIcon}
-            title='Facebook'
-            href='https://www.facebook.com/profile.php?id=61574547915058'
-            target='_blank'
-          />
-          <SocialLink
-            icon={InstagramIcon}
-            title='Instagram'
-            href='https://www.instagram.com/magnus_bnb/'
-            target='_blank'
-          />
-          <SocialLink
-            icon={WhatsAppIcon}
-            title='WhatsApp'
-            href='https://wa.me/306973560007'
-            target='_blank'
-            rel='noopener noreferrer'
-          />
+          <InView
+            variants={variants}
+            viewOptions={{margin: '0px 0px -50px 0px'}}
+            transition={{duration: 0.75, ease: 'easeOut'}}
+            once
+          >
+            <SocialLink
+              icon={FacebookIcon}
+              title='Facebook'
+              href='https://www.facebook.com/profile.php?id=61574547915058'
+              target='_blank'
+            />
+          </InView>
+          <InView
+            variants={variants}
+            viewOptions={{margin: '0px 0px -50px 0px'}}
+            transition={{duration: 0.75, ease: 'easeOut', delay: 0.1}}
+            once
+          >
+            <SocialLink
+              icon={InstagramIcon}
+              title='Instagram'
+              href='https://www.instagram.com/magnus_bnb/'
+              target='_blank'
+            />
+          </InView>
+          <InView
+            variants={variants}
+            viewOptions={{margin: '0px 0px -50px 0px'}}
+            transition={{duration: 0.75, ease: 'easeOut', delay: 0.2}}
+            once
+          >
+            <SocialLink
+              icon={WhatsAppIcon}
+              title='WhatsApp'
+              href='https://wa.me/306973560007'
+              target='_blank'
+              rel='noopener noreferrer'
+            />
+          </InView>
         </div>
       </Section>
     </Container>

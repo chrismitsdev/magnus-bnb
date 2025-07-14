@@ -3,7 +3,7 @@ import {LoaderIcon} from 'lucide-react'
 import {cn} from '@/src/lib/utils'
 
 type Variant = 'primary' | 'outline' | 'ghost'
-type Size = 'lg' | 'md' | 'sm' | 'icon-lg' | 'icon-md'
+type Size = 'lg' | 'md' | 'sm' | 'icon-lg' | 'icon-md' | 'icon-sm'
 
 interface ButtonProps extends React.ComponentPropsWithRef<'button'>, AsChild {
   variant?: Variant
@@ -27,7 +27,8 @@ const buttonPropsMap: {
     md: 'px-4 py-1.75 text-base',
     sm: 'px-2 py-0.75 text-sm',
     'icon-lg': 'p-2.75',
-    'icon-md': 'p-1.75'
+    'icon-md': 'p-1.75',
+    'icon-sm': 'p-0.75'
   }
 }
 
@@ -36,7 +37,8 @@ const loaderSizeMap: Record<Size, number> = {
   md: 20,
   sm: 16,
   'icon-lg': 24,
-  'icon-md': 20
+  'icon-md': 20,
+  'icon-sm': 16
 }
 
 function Button({
@@ -58,8 +60,8 @@ function Button({
         'relative inline-flex justify-center items-center gap-2 whitespace-nowrap font-semibold border rounded-md transition-colors [&>*]:shrink-0 disabled:pointer-events-none disabled:opacity-35 ',
         buttonPropsMap.variant[variant],
         buttonPropsMap.size[size],
-        className,
-        isLoading && '[&>*:not(span:last-child)]:invisible'
+        isLoading && '[&>*:not(span:last-child)]:invisible',
+        className
       )}
       type={type}
       draggable={draggable}

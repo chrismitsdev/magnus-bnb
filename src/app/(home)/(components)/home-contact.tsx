@@ -1,73 +1,26 @@
 import {createElement} from 'react'
-import {
-  UserIcon,
-  MailIcon,
-  PhoneIcon,
-  MessageCircleIcon,
-  SmartphoneIcon,
-  SendHorizonal
-} from 'lucide-react'
+import {MailIcon, PhoneIcon, SmartphoneIcon} from 'lucide-react'
 import {Container} from '@/src/components/shared/container'
 import {Section} from '@/src/components/shared/section'
 import {Typography} from '@/src/components/ui/typography'
-import {Input} from '@/src/components/ui/input'
-import {Textarea} from '@/src/components/ui/textarea'
-import {
-  Card,
-  CardBody,
-  CardTitle,
-  CardDescription
-} from '@/src/components/ui/card'
-import {Button} from '@/src/components/ui/button'
-import {WhatsAppIcon} from '@/src/components/icons/whatsapp'
+import {Card, CardTitle, CardDescription} from '@/src/components/ui/card'
+import {ContactForm} from '@/src/app/(home)/(components)/home-conatct-form'
 
 function HomeContact() {
   return (
     <Container asChild>
       <Section>
-        <Card
-          className='p-0 mx-auto max-w-5xl'
-          borderTrail
-        >
+        <Card className='p-0 mx-auto max-w-5xl'>
           <div className='px-4 py-8 space-y-10 sm:px-16 sm:pt-16 sm:pb-10'>
-            <div className='space-y-4'>
-              <CardTitle>Επικοινωνήστε μαζί μας</CardTitle>
-              <CardDescription>
-                Είμαστε εδώ για να σας βοηθήσουμε με κάθε ανάγκη διαχείρισης
-                ακινήτου. Είτε είστε ιδιοκτήτης που αναζητά αξιόπιστες υπηρεσίες
-                είτε ενοικιαστής με απορίες, η ομάδα μας είναι έτοιμη να σας
-                εξυπηρετήσει. <br /> Επικοινωνήστε μαζί μας σήμερα και ας
-                ξεκινήσουμε τη συζήτηση.
-              </CardDescription>
-            </div>
-            <form>
-              <div className='space-y-6'>
-                <Input
-                  placeholder='Ονοματεπώνυμο'
-                  icon={UserIcon}
-                />
-                <Input
-                  placeholder='Email'
-                  type='email'
-                  autoComplete='email'
-                  icon={MailIcon}
-                />
-                <Input
-                  placeholder='Αριθμός τηλεφώνου'
-                  type='tel'
-                  autoComplete='email'
-                  icon={PhoneIcon}
-                />
-                <Textarea
-                  placeholder='Το μήνυμά σας'
-                  icon={MessageCircleIcon}
-                />
-                <Button className='w-full sm:w-auto'>
-                  <span>Υποβολή</span>
-                  <SendHorizonal size={20} />
-                </Button>
-              </div>
-            </form>
+            <CardTitle>Επικοινωνήστε μαζί μας</CardTitle>
+            <CardDescription>
+              Είμαστε εδώ για να σας βοηθήσουμε με κάθε ανάγκη διαχείρισης
+              ακινήτου. Είτε είστε ιδιοκτήτης που αναζητά αξιόπιστες υπηρεσίες
+              είτε ενοικιαστής με απορίες, η ομάδα μας είναι έτοιμη να σας
+              εξυπηρετήσει. <br /> Επικοινωνήστε μαζί μας σήμερα και ας
+              ξεκινήσουμε τη συζήτηση.
+            </CardDescription>
+            <ContactForm />
           </div>
 
           <div className='h-px w-full bg-accent/15' />
@@ -101,7 +54,7 @@ function HomeContact() {
 function HomeContactLink({
   title,
   description,
-  icon,
+  icon: Icon,
   ...props
 }: React.ComponentPropsWithRef<'a'> & {
   description: string
@@ -111,11 +64,14 @@ function HomeContactLink({
 }) {
   return (
     <a
-      className='basis-full flex bg-background/50 border border-accent/15 rounded-md hover:bg-background'
+      className='basis-full flex bg-background/50 border border-accent/15 rounded-md transition hover:bg-background hover:border-accent group'
       {...props}
     >
-      <span className='p-5'>{createElement(icon, {size: 24})}</span>
-      <div className='shrink-0 h-full w-px bg-accent/15' />
+      <span className='p-5'>
+        <Icon size={24} />
+      </span>
+      {/* <span className='p-5'>{createElement(icon, {size: 24})}</span> */}
+      <div className='shrink-0 h-full w-px bg-accent/15 group-hover:bg-accent transition' />
       <div className='py-2 pr-2 pl-4 w-full space-y-1'>
         <Typography variant='large'>{title}</Typography>
         <Typography variant='small'>{description}</Typography>
@@ -123,33 +79,6 @@ function HomeContactLink({
     </a>
   )
 }
-
-// function HomeContactLink({
-//   title,
-//   description,
-//   icon,
-//   ...props
-// }: React.ComponentPropsWithRef<'a'> & {
-//   description: string
-//   icon: React.ComponentType<
-//     React.ComponentPropsWithRef<'svg'> & {size?: number}
-//   >
-// }) {
-//   return (
-//     <a
-//       className='basis-full flex gap-4 rounded-md hover:bg-accent/10 group'
-//       {...props}
-//     >
-//       <div className='p-5 rounded-md bg-accent/10'>
-//         {createElement(icon, {size: 24})}
-//       </div>
-//       <div className='py-2 pr-2 w-full space-y-1'>
-//         <Typography variant='large'>{title}</Typography>
-//         <Typography variant='small'>{description}</Typography>
-//       </div>
-//     </a>
-//   )
-// }
 
 HomeContact.displayName = 'HomeContact'
 HomeContactLink.displayName = 'HomeContactLink'

@@ -1,12 +1,12 @@
 'use client'
 
 import 'leaflet/dist/leaflet.css'
-import Image from 'next/image'
 import {useCallback} from 'react'
 import {MapPinIcon} from 'lucide-react'
 import L, {type LatLngTuple} from 'leaflet'
 import {MapContainer, TileLayer, Popup} from 'react-leaflet'
 import {Marker} from '@adamscybot/react-leaflet-component-marker'
+import {CustomImage} from '@/src/components/ui/custom-image'
 import {Typography} from '@/src/components/ui/typography'
 import logo from '@/public/images/logo.png'
 
@@ -39,8 +39,8 @@ function Map() {
           }
         >
           <Popup offset={[0, -8]}>
-            <div className='flex items-center gap-2'>
-              <Image
+            <div className='flex items-center gap-4'>
+              <CustomImage
                 className='shrink-0 size-12'
                 src={logo}
                 alt='MagnusBnB logo'

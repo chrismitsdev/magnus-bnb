@@ -1,6 +1,5 @@
 'use client'
 
-import Image from 'next/image'
 import Autoplay from 'embla-carousel-autoplay'
 import {cn} from '@/src/lib/utils'
 import {
@@ -12,6 +11,7 @@ import {
   CarouselButtonNext,
   CarouselDots
 } from '@/src/components/ui/carousel'
+import {CustomImage} from '@/src/components/ui/custom-image'
 import {carouselImageList} from '@/public/images/carousel'
 
 function HomeCarousel() {
@@ -27,7 +27,7 @@ function HomeCarousel() {
             {carouselImageList.map(function (image, i, a) {
               return (
                 <CarouselSlide key={image.src}>
-                  <Image
+                  <CustomImage
                     className={cn(
                       'w-full h-full object-contain',
                       i === a.length - 1 &&
@@ -35,7 +35,6 @@ function HomeCarousel() {
                     )}
                     src={image}
                     alt={`Home page carousel image ${i + 1}`}
-                    placeholder='blur'
                     sizes='100vw'
                     priority={i === 0}
                   />

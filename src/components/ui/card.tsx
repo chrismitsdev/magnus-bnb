@@ -1,5 +1,5 @@
-import Image from 'next/image'
 import {cn} from '@/src/lib/utils'
+import {CustomImage} from '@/src/components/ui/custom-image'
 import {Typography} from '@/src/components/ui/typography'
 import {BorderTrail} from '@/src/components/ui/border-trail'
 
@@ -22,17 +22,11 @@ function Card({
   )
 }
 
-function CardImage({
-  src,
-  placeholder = 'blur',
-  ...props
-}: React.ComponentPropsWithRef<typeof Image>) {
+function CardImage(props: React.ComponentPropsWithRef<typeof CustomImage>) {
   return (
     <div className='h-70 sm:h-96'>
-      <Image
+      <CustomImage
         className='w-full h-full object-cover'
-        src={src}
-        placeholder={placeholder}
         {...props}
       />
     </div>

@@ -1,6 +1,8 @@
 import '@/src/styles/index.css'
 import type {Metadata} from 'next'
 import {Poppins, Playfair_Display} from 'next/font/google'
+import {Analytics} from '@vercel/analytics/next'
+import {GoogleAnalytics} from '@next/third-parties/google'
 import {Header} from '@/src/components/shared/header'
 import {Footer} from '@/src/components/shared/footer'
 
@@ -40,6 +42,8 @@ export default function RootLayout({
         <Header />
         <main>{children}</main>
         <Footer />
+        <Analytics />
+        <GoogleAnalytics gaId='G-GXWJNYS6ES' />
       </body>
     </html>
   )

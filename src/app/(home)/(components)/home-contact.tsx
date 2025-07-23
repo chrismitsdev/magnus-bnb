@@ -1,4 +1,3 @@
-import {createElement} from 'react'
 import {MailIcon, PhoneIcon, SmartphoneIcon} from 'lucide-react'
 import {Container} from '@/src/components/shared/container'
 import {Section} from '@/src/components/shared/section'
@@ -70,7 +69,6 @@ function HomeContactLink({
       <span className='p-5'>
         <Icon size={24} />
       </span>
-      {/* <span className='p-5'>{createElement(icon, {size: 24})}</span> */}
       <div className='shrink-0 h-full w-px bg-accent/15 group-hover:bg-accent transition' />
       <div className='py-2 pr-2 pl-4 w-full space-y-1'>
         <Typography variant='large'>{title}</Typography>

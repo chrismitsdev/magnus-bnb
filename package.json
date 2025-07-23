@@ -11,8 +11,9 @@
   },
   "devDependencies": {
     "@adamscybot/react-leaflet-component-marker": "^2.0.3",
-    "@next/third-parties": "^15.4.2",
+    "@next/third-parties": "^15.4.3",
     "@radix-ui/react-slot": "1.2.3",
+    "@react-email/components": "^0.3.2",
     "@tailwindcss/postcss": "4.1.11",
     "@types/leaflet": "^1.9.20",
     "@types/node": "24.1.0",
@@ -25,14 +26,18 @@
     "leaflet": "^1.9.4",
     "lucide-react": "^0.525.0",
     "motion": "^12.23.3",
-    "next": "15.4.2",
+    "next": "15.4.3",
+    "prettier": "^3.6.2",
     "react": "19.1.0",
     "react-dom": "19.1.0",
     "react-leaflet": "^5.0.0",
+    "resend": "^4.7.0",
     "rimraf": "6.0.1",
     "sharp": "^0.34.3",
+    "sonner": "^2.0.6",
     "tailwind-merge": "3.3.1",
     "tailwindcss": "4.1.11",
-    "typescript": "5.8.3"
+    "typescript": "5.8.3",
+    "valibot": "^1.1.0"
   }
 }

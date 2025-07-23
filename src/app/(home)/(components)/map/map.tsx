@@ -52,7 +52,7 @@ function Map() {
                   asChild
                 >
                   <a
-                    href='https://www.google.com/maps?q=Dikastirion+33,+Alexandroupoli+681+00'
+                    href='https://www.google.com/maps?q=MagnusBnB+Alexandroupolis'
                     target='_blank'
                     rel='noopener noreferrer'
                   >

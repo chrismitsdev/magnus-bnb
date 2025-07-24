@@ -3,7 +3,6 @@ import {
   Tailwind,
   Body,
   Container,
-  Img,
   Hr,
   Section,
   Row,
@@ -21,19 +20,6 @@ function EmailFormInternal(data: Readonly<ContactFormActionState['data']>) {
         <Body className='m-0 bg-[#000000] text-[#ffffff]'>
           <Container className='max-w-[576px]'>
             <Section className='px-4 pt-8 pb-6'>
-              <Row className='mb-8'>
-                <Link
-                  href='https://www.magnusbnb.com/'
-                  target='_blank'
-                  rel='noopener noreferrer'
-                >
-                  <Img
-                    className='w-full'
-                    src='https://www.magnusbnb.com/images/logo-email.png'
-                    alt='MagnusBnB logo'
-                  />
-                </Link>
-              </Row>
               <Row>
                 <Heading
                   className='my-0'

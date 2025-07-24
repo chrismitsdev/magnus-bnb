@@ -56,7 +56,7 @@ function Map() {
                     target='_blank'
                     rel='noopener noreferrer'
                   >
-                    Οδηγίες
+                    Τοποθεσία
                   </a>
                 </Typography>
               </div>

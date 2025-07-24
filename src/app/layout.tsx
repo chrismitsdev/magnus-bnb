@@ -20,10 +20,11 @@ const playfair = Playfair_Display({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://magnusbnb.com/'),
-  title: 'MagnusBnB | Επαγγελματική διαχείριση Airbnb στην Αλεξανδρούπολη',
+  metadataBase: new URL('https://www.magnusbnb.com/'),
+  title:
+    'MagnusBnB | Γραφείο επαγγελματικής διαχείρισης ακινήτων στην Αλεξανδρούπολη',
   description:
-    'MagnusBnB είναι το κορυφαίο γραφείο επαγγελματικής διαχείρισης ακινήτων Airbnb στην Αλεξανδρούπολη, με έμφαση στην ποιότητα, εμπιστοσύνη και εμπειρία.',
+    'Η MagnusBnB είναι το κορυφαίο γραφείο επαγγελματικής διαχείρισης ακινήτων στην Αλεξανδρούπολη, με έμφαση στην ποιότητα, την εμπιστοσύνη και εμπειρία.',
   formatDetection: {
     email: true,
     telephone: true

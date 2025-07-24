@@ -1,22 +1,20 @@
 import type {MetadataRoute} from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
+  const lastModified = new Date().toISOString()
+
   return [
     {
-      url: 'https://magnusbnb.com/',
-      lastModified: new Date()
+      url: 'https://www.magnusbnb.com/',
+      lastModified
     },
     {
-      url: 'https://magnusbnb.com/',
-      lastModified: new Date()
+      url: 'https://www.magnusbnb.com/privacy-policy',
+      lastModified
     },
     {
-      url: 'https://magnusbnb.com/privacy-policy',
-      lastModified: new Date()
-    },
-    {
-      url: 'https://magnusbnb.com/terms-of-service',
-      lastModified: new Date()
+      url: 'https://www.magnusbnb.com/terms-of-service',
+      lastModified
     }
   ]
 }

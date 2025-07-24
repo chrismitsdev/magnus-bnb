@@ -23,7 +23,7 @@ function EmailFormInternal(data: Readonly<ContactFormActionState['data']>) {
               <Row>
                 <Heading
                   className='my-0'
-                  as='h4'
+                  as='h3'
                 >
                   Νέα υποβολή φόρμας
                 </Heading>

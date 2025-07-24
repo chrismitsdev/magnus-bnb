@@ -1,6 +1,11 @@
+import type {Metadata} from 'next'
 import {Container} from '@/src/components/shared/container'
 import {Section} from '@/src/components/shared/section'
 import {Typography} from '@/src/components/ui/typography'
+
+export const metadata: Metadata = {
+  title: 'Όροι Παροχής Υπηρεσιών | Magnus BnB'
+}
 
 export default function TermsOfServicePage() {
   return (

@@ -1,7 +1,12 @@
+import type {Metadata} from 'next'
 import {DotIcon} from 'lucide-react'
 import {Container} from '@/src/components/shared/container'
 import {Section} from '@/src/components/shared/section'
 import {Typography} from '@/src/components/ui/typography'
+
+export const metadata: Metadata = {
+  title: 'Πολιτική Απορρήτου | Magnus BnB'
+}
 
 export default function PrivacyPolicyPage() {
   return (

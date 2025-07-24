@@ -6,6 +6,7 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: '*',
       allow: '/'
     },
-    sitemap: 'https://magnusbnb.com/sitemap.xml'
+    sitemap: 'https://www.magnusbnb.com/sitemap.xml',
+    host: 'https://www.magnusbnb.com'
   }
 }

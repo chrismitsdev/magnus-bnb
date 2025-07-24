@@ -53,7 +53,7 @@ const variantsMap: Record<
   },
   tiny: {
     tag: 'small',
-    className: 'text-xs text-foreground/50'
+    className: 'text-[10px] text-foreground/50 tracking-wider font-normal'
   }
 }
 

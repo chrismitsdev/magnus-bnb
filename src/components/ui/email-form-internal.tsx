@@ -22,10 +22,14 @@ function EmailFormInternal(data: Readonly<ContactFormActionState['data']>) {
           <Container className='max-w-[576px]'>
             <Section className='px-4 pt-8 pb-6'>
               <Row className='mb-8'>
-                <Link href='https://www.magnusbnb.com/'>
+                <Link
+                  href='https://www.magnusbnb.com/'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
                   <Img
                     className='w-full'
-                    src='https://4y4jwmfhzutn57mw.myfritz.net:47971/nas/filelink.lua?id=b8c22845467250b7'
+                    src='https://www.magnusbnb.com/images/logo-email.png'
                     alt='MagnusBnB logo'
                   />
                 </Link>
@@ -65,6 +69,8 @@ function EmailFormInternal(data: Readonly<ContactFormActionState['data']>) {
                   <Link
                     className='text-sm leading-6'
                     href={`mailto:${data.email}`}
+                    target='_blank'
+                    rel='noopener noreferrer'
                   >
                     {data.email}
                   </Link>
@@ -81,6 +87,8 @@ function EmailFormInternal(data: Readonly<ContactFormActionState['data']>) {
                   <Link
                     className='text-sm leading-6'
                     href={`tel:${data.phone}`}
+                    target='_blank'
+                    rel='noopener noreferrer'
                   >
                     {data.phone}
                   </Link>

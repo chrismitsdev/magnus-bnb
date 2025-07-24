@@ -47,7 +47,7 @@ function Input({
       )}
       {error && (
         <Typography
-          className='mt-1 self-end text-red-800 font-semibold'
+          className='mt-1 self-end text-red-700 font-semibold'
           variant='tiny'
         >
           {error}

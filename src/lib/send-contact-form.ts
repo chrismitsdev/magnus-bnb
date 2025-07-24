@@ -9,7 +9,7 @@ export async function sendContactForm(
 ) {
   try {
     const {error} = await resend.emails.send({
-      from: 'MagnusBnB <info@magnusbnb.com>',
+      from: 'MagnusBnB <info@updates.magnusbnb.com>',
       react: EmailFormInternal(formData),
       ...(process.env.NODE_ENV === 'production'
         ? {

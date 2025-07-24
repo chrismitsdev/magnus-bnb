@@ -7,10 +7,21 @@ const resend = new Resend(process.env.RESEND_API_KEY)
 export async function sendContactForm(
   formData: ContactFormActionState['data']
 ) {
+  const plainText = `
+    Νέα υποβολή φόρμας από το MagnusBnB:
+    ---------------------------------------
+    Ονοματεπώνυμο: ${formData.fullName}
+    Email: ${formData.email}
+    Τηλέφωνο: ${formData.phone}
+    Μήνυμα:
+    ${formData.message || 'Ο επισκέπτης δεν άφησε κάποιο μήνυμα.'}
+  `.trim()
+
   try {
     const {error} = await resend.emails.send({
       from: 'MagnusBnB <info@updates.magnusbnb.com>',
       react: EmailFormInternal(formData),
+      text: plainText,
       ...(process.env.NODE_ENV === 'production'
         ? {
             subject: 'Φόρμα επικοινωνίας - MagnusBnB',

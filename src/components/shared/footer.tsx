@@ -80,7 +80,7 @@ function Footer() {
           </div>
           <div className='flex flex-col items-center gap-2'>
             <Typography variant='tiny'>
-              &copy; {new Date().getFullYear()} MagnusBnB | Alexandroupoli |
+              &copy; {new Date().getFullYear()} Magnus BnB | Alexandroupoli |
               Greece
             </Typography>
             <div className='flex items-center gap-1'>

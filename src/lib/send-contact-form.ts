@@ -8,7 +8,7 @@ export async function sendContactForm(
   formData: ContactFormActionState['data']
 ) {
   const plainText = `
-    Νέα υποβολή φόρμας από το MagnusBnB:
+    Νέα υποβολή φόρμας από το Magnus BnB:
     ---------------------------------------
     Ονοματεπώνυμο: ${formData.fullName}
     Email: ${formData.email}
@@ -19,18 +19,18 @@ export async function sendContactForm(
 
   try {
     const {error} = await resend.emails.send({
-      from: 'MagnusBnB <info@updates.magnusbnb.com>',
+      from: 'Magnus BnB <info@updates.magnusbnb.com>',
       react: EmailFormInternal(formData),
       text: plainText,
       ...(process.env.NODE_ENV === 'production'
         ? {
-            subject: 'Φόρμα επικοινωνίας - MagnusBnB',
+            subject: 'Φόρμα επικοινωνίας - Magnus BnB',
             to: 'bnbmagnus@gmail.com',
             cc: 'chrismits88@gmail.com',
             replyTo: formData.email
           }
         : {
-            subject: 'Φόρμα επικοινωνίας - MagnusBnB (Dev mode)',
+            subject: 'Φόρμα επικοινωνίας - Magnus BnB (Dev mode)',
             to: 'chrismits88@gmail.com'
           })
     })

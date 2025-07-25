@@ -7,7 +7,9 @@ import {HomeContact} from '@/src/app/(home)/(components)/home-contact'
 import {HomeLocation} from '@/src/app/(home)/(components)/home-location'
 
 export const metadata: Metadata = {
-  title: 'Αρχική | Magnus BnB'
+  title: 'Αρχική | Magnus BnB',
+  description:
+    'Καλώς ήρθατε στη Magnus BnB – κορυφαία επαγγελματική διαχείριση ακινήτων Airbnb στην Αλεξανδρούπολη.'
 }
 
 export default function HomePage() {

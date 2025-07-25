@@ -16,7 +16,7 @@ function Header() {
             <Image
               className='w-auto h-28'
               src={logo}
-              alt='MagnusBnB brand logo'
+              alt='Magnus BnB brand logo'
               priority
             />
             <Typography

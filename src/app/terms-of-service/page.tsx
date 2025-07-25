@@ -5,7 +5,9 @@ import {TermsServiceHeader} from '@/src/app/terms-of-service/(components)/terms-
 import {Typography} from '@/src/components/ui/typography'
 
 export const metadata: Metadata = {
-  title: 'Όροι Παροχής Υπηρεσιών | Magnus BnB'
+  title: 'Όροι Παροχής Υπηρεσιών | Magnus BnB',
+  description:
+    'Διαβάστε τους όρους παροχής υπηρεσιών της Magnus BnB για τις υπηρεσίες διαχείρισης Airbnb.'
 }
 
 export default function TermsOfServicePage() {
@@ -16,8 +18,9 @@ export default function TermsOfServicePage() {
         title='Όροι Παροχής Υπηρεσιών'
         description={
           <>
-            Καλώς ήρθατε στη MagnusBnB. Με την πρόσβαση ή τη χρήση του ιστότοπου
-            και των υπηρεσιών μας, αποδέχεστε τους παρακάτω Όρους Χρήσης.
+            Καλώς ήρθατε στη Magnus BnB. Με την πρόσβαση ή τη χρήση του
+            ιστότοπου και των υπηρεσιών μας, αποδέχεστε τους παρακάτω Όρους
+            Χρήσης.
             <br />
             Παρακαλούμε διαβάστε τους προσεκτικά.
           </>
@@ -38,16 +41,16 @@ export default function TermsOfServicePage() {
             <Typography variant='h4'>Πνευματική Ιδιοκτησία:</Typography>
             <Typography>
               Όλο το περιεχόμενο του ιστότοπου, όπως κείμενα, εικόνες, λογότυπα
-              και γραφικά, αποτελεί ιδιοκτησία της MagnusBnB ή των δικαιοπαρόχων
-              της και προστατεύεται από την ισχύουσα νομοθεσία περί πνευματικής
-              ιδιοκτησίας.
+              και γραφικά, αποτελεί ιδιοκτησία της Magnus BnB ή των
+              δικαιοπαρόχων της και προστατεύεται από την ισχύουσα νομοθεσία
+              περί πνευματικής ιδιοκτησίας.
             </Typography>
           </div>
 
           <div className='space-y-2'>
             <Typography variant='h4'>Περιορισμός Ευθύνης:</Typography>
             <Typography>
-              Η MagnusBnB δεν φέρει ευθύνη για άμεσες, έμμεσες ή επακόλουθες
+              Η Magnus BnB δεν φέρει ευθύνη για άμεσες, έμμεσες ή επακόλουθες
               ζημίες που προκύπτουν από τη χρήση του ιστότοπου ή των υπηρεσιών
               μας.
               <br />
@@ -60,8 +63,8 @@ export default function TermsOfServicePage() {
             <Typography variant='h4'>Υπηρεσίες Τρίτων:</Typography>
             <Typography>
               Ο ιστότοπός μας ενδέχεται να περιλαμβάνει συνδέσμους προς
-              εξωτερικούς ιστότοπους ή υπηρεσίες που δεν διαχειρίζεται η
-              MagnusBnB.
+              εξωτερικούς ιστότοπους ή υπηρεσίες που δεν διαχειρίζεται η Magnus
+              BnB.
               <br />
               Δεν φέρουμε ευθύνη για το περιεχόμενο ή τις πολιτικές των τρίτων
               αυτών μερών.
@@ -71,7 +74,7 @@ export default function TermsOfServicePage() {
           <div className='space-y-2'>
             <Typography variant='h4'>Αλλαγές στους Όρους:</Typography>
             <Typography>
-              Η MagnusBnB διατηρεί το δικαίωμα να τροποποιεί τους Όρους Χρήσης
+              Η Magnus BnB διατηρεί το δικαίωμα να τροποποιεί τους Όρους Χρήσης
               οποιαδήποτε στιγμή.
               <br />
               Οι αλλαγές τίθενται σε ισχύ με τη δημοσίευσή τους στον παρόντα

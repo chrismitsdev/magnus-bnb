@@ -43,16 +43,16 @@ function Map() {
               <CustomImage
                 className='shrink-0 size-12'
                 src={logo}
-                alt='MagnusBnB logo'
+                alt='Magnus BnB logo'
               />
               <div className='shrink-0 text-foreground'>
-                <Typography>MagnusBnB</Typography>
+                <Typography>Magnus BnB</Typography>
                 <Typography
                   variant='small'
                   asChild
                 >
                   <a
-                    href='https://www.google.com/maps?q=MagnusBnB+Alexandroupolis'
+                    href='https://www.google.com/maps?q=Magnus BnB+Alexandroupolis'
                     target='_blank'
                     rel='noopener noreferrer'
                   >

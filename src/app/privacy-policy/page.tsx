@@ -6,7 +6,9 @@ import {PrivacyPolicyHeader} from '@/src/app/privacy-policy/(components)/privacy
 import {Typography} from '@/src/components/ui/typography'
 
 export const metadata: Metadata = {
-  title: 'Πολιτική Απορρήτου | Magnus BnB'
+  title: 'Πολιτική Απορρήτου | Magnus BnB',
+  description:
+    'Διαβάστε την πολιτική απορρήτου της Magnus BnB για την προστασία των προσωπικών σας δεδομένων.'
 }
 
 export default function PrivacyPolicyPage() {
@@ -15,7 +17,7 @@ export default function PrivacyPolicyPage() {
       <PrivacyPolicyHeader />
       <Section
         title='Πολιτική Απορρήτου'
-        description='Στη MagnusBnB σεβόμαστε το απόρρητό σας και δεσμευόμαστε να
+        description='Στη Magnus BnB σεβόμαστε το απόρρητό σας και δεσμευόμαστε να
       προστατεύουμε τα προσωπικά σας δεδομένα. Η παρούσα Πολιτική Απορρήτου εξηγεί πώς συλλέγουμε, χρησιμοποιούμε και διασφαλίζουμε τα δεδομένα σας όταν επισκέπτεστε τον ιστότοπό μας ή χρησιμοποιείτε τις υπηρεσίες μας.'
       >
         <div className='mt-10 space-y-10'>

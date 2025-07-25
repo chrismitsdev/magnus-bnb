@@ -1,6 +1,7 @@
 import type {Metadata} from 'next'
 import {Container} from '@/src/components/shared/container'
 import {Section} from '@/src/components/shared/section'
+import {TermsServiceHeader} from '@/src/app/terms-of-service/(components)/terms-of-service-header'
 import {Typography} from '@/src/components/ui/typography'
 
 export const metadata: Metadata = {
@@ -10,6 +11,7 @@ export const metadata: Metadata = {
 export default function TermsOfServicePage() {
   return (
     <Container>
+      <TermsServiceHeader />
       <Section
         title='Όροι Παροχής Υπηρεσιών'
         description={

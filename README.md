@@ -1,4 +1,4 @@
-# magnusbnb
+# magnus-bnb
 
 Repo of the Magnus BnB website.
 

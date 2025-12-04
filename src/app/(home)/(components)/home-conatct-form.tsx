@@ -1,17 +1,17 @@
 'use client'
 
-import {useActionState} from 'react'
 import {
-  UserIcon,
   MailIcon,
-  PhoneIcon,
   MessageCircleIcon,
-  SendHorizonal
+  PhoneIcon,
+  SendHorizonal,
+  UserIcon
 } from 'lucide-react'
-import {type ContactFormActionState, contactFormAction} from '@/src/lib/actions'
+import {useActionState} from 'react'
+import {Button} from '@/src/components/ui/button'
 import {Input} from '@/src/components/ui/input'
 import {Textarea} from '@/src/components/ui/textarea'
-import {Button} from '@/src/components/ui/button'
+import {type ContactFormActionState, contactFormAction} from '@/src/lib/actions'
 
 const initialState: ContactFormActionState = {
   data: {

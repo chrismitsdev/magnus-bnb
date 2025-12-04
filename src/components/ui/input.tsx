@@ -1,7 +1,7 @@
+import type {LucideProps} from 'lucide-react'
 import {createElement} from 'react'
-import {type LucideProps} from 'lucide-react'
-import {cn} from '@/src/lib/utils'
 import {Typography} from '@/src/components/ui/typography'
+import {cn} from '@/src/lib/utils'
 
 interface InputProps extends React.ComponentPropsWithRef<'input'> {
   wrapperProps?: React.ComponentPropsWithRef<'div'>

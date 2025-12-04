@@ -1,7 +1,7 @@
 import type {Metadata} from 'next'
+import {TermsServiceHeader} from '@/src/app/terms-of-service/(components)/terms-of-service-header'
 import {Container} from '@/src/components/shared/container'
 import {Section} from '@/src/components/shared/section'
-import {TermsServiceHeader} from '@/src/app/terms-of-service/(components)/terms-of-service-header'
 import {Typography} from '@/src/components/ui/typography'
 
 export const metadata: Metadata = {

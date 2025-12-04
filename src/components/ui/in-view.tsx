@@ -1,13 +1,13 @@
 'use client'
 
-import {ReactNode, useState, useRef, useEffect} from 'react'
 import {
   motion,
+  type Transition,
+  type UseInViewOptions,
   useInView,
-  Variant,
-  Transition,
-  UseInViewOptions
+  type Variant
 } from 'motion/react'
+import {type ReactNode, useEffect, useRef, useState} from 'react'
 
 export type InViewProps = {
   variants?: {
@@ -42,19 +42,16 @@ function InView({
   ] as typeof asChild
 
   // On mount, if `once` is requested, check if element is already in view
-  useEffect(
-    function () {
-      if (!once || isViewed) return
-      const el = ref.current
-      if (el) {
-        const rect = el.getBoundingClientRect()
-        if (rect.top < window.innerHeight && rect.bottom > 0) {
-          setIsViewed(true)
-        }
+  useEffect(() => {
+    if (!once || isViewed) return
+    const el = ref.current
+    if (el) {
+      const rect = el.getBoundingClientRect()
+      if (rect.top < window.innerHeight && rect.bottom > 0) {
+        setIsViewed(true)
       }
-    },
-    [once, isViewed]
-  )
+    }
+  }, [once, isViewed])
 
   return (
     <MotionComponent

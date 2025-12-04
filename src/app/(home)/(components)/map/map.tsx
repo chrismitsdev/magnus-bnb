@@ -1,19 +1,20 @@
 'use client'
 
 import 'leaflet/dist/leaflet.css'
-import {useCallback} from 'react'
-import {MapPinIcon} from 'lucide-react'
-import L, {type LatLngTuple} from 'leaflet'
-import {MapContainer, TileLayer, Popup} from 'react-leaflet'
 import {Marker} from '@adamscybot/react-leaflet-component-marker'
+import type L from 'leaflet'
+import type {LatLngTuple} from 'leaflet'
+import {MapPinIcon} from 'lucide-react'
+import {useCallback} from 'react'
+import {MapContainer, Popup, TileLayer} from 'react-leaflet'
+import logo from '@/public/images/logo.png'
 import {CustomImage} from '@/src/components/ui/custom-image'
 import {Typography} from '@/src/components/ui/typography'
-import logo from '@/public/images/logo.png'
 
 const coords = [40.844352, 25.8750718] satisfies LatLngTuple
 
-function Map() {
-  const handleMarkerRef = useCallback(function (marker: L.Marker | null) {
+function MagnusMap() {
+  const handleMarkerRef = useCallback((marker: L.Marker | null) => {
     if (marker) {
       marker.openPopup()
     }
@@ -68,6 +69,6 @@ function Map() {
   )
 }
 
-Map.displayName = 'Map'
+MagnusMap.displayName = 'MagnusMap'
 
-export default Map
+export default MagnusMap

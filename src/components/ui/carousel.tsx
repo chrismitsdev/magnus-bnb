@@ -1,15 +1,15 @@
 'use client'
 
-import {useState, useCallback, useEffect} from 'react'
 import {Slot} from '@radix-ui/react-slot'
 import useEmblaCarousel from 'embla-carousel-react'
 import {ChevronLeftIcon, ChevronRightIcon} from 'lucide-react'
-import {cn} from '@/src/lib/utils'
+import {useCallback, useEffect, useState} from 'react'
+import {Button} from '@/src/components/ui/button'
 import {
   CarouselContext,
   useCarouselContext
 } from '@/src/context/carousel-context'
-import {Button} from '@/src/components/ui/button'
+import {cn} from '@/src/lib/utils'
 
 type EmblaApiType = ReturnType<typeof useEmblaCarousel>[1]
 
@@ -37,59 +37,47 @@ function Carousel({
   const totalSlides = emblaApi?.slideNodes().length ?? 0
   const Comp = asChild ? Slot : 'div'
 
-  const stopAutoplay = useCallback(
-    function () {
-      if (!emblaApi) return
+  const stopAutoplay = useCallback(() => {
+    if (!emblaApi) return
 
-      const autoplay = emblaApi.plugins()?.autoplay
-      autoplay.stop()
-    },
-    [emblaApi]
-  )
+    const autoplay = emblaApi.plugins()?.autoplay
+    autoplay.stop()
+  }, [emblaApi])
 
-  const onPrevButtonClick = useCallback(
-    function () {
-      if (!emblaApi) return
+  const onPrevButtonClick = useCallback(() => {
+    if (!emblaApi) return
 
-      stopAutoplay()
-      emblaApi.scrollPrev()
-    },
-    [emblaApi]
-  )
+    stopAutoplay()
+    emblaApi.scrollPrev()
+  }, [emblaApi, stopAutoplay])
 
-  const onNextButtonClick = useCallback(
-    function () {
-      if (!emblaApi) return
+  const onNextButtonClick = useCallback(() => {
+    if (!emblaApi) return
 
-      stopAutoplay()
-      emblaApi.scrollNext()
-    },
-    [emblaApi]
-  )
+    stopAutoplay()
+    emblaApi.scrollNext()
+  }, [emblaApi, stopAutoplay])
 
   const onThumbDotButtonClick = useCallback(
-    function (index: number) {
+    (index: number) => {
       if (!emblaApi) return
 
       stopAutoplay()
       emblaApi.scrollTo(index)
     },
-    [emblaApi]
+    [emblaApi, stopAutoplay]
   )
 
-  const onSelect = useCallback(function (emblaApi: EmblaApiType) {
+  const onSelect = useCallback((emblaApi: EmblaApiType) => {
     if (!emblaApi) return
     setSelectedIndex(emblaApi.selectedScrollSnap())
   }, [])
 
-  useEffect(
-    function () {
-      if (!emblaApi) return
-      onSelect(emblaApi)
-      emblaApi.on('reInit', onSelect).on('select', onSelect)
-    },
-    [emblaApi, onSelect]
-  )
+  useEffect(() => {
+    if (!emblaApi) return
+    onSelect(emblaApi)
+    emblaApi.on('reInit', onSelect).on('select', onSelect)
+  }, [emblaApi, onSelect])
 
   return (
     <CarouselContext
@@ -203,7 +191,7 @@ function CarouselDots({
   className,
   ...props
 }: React.ComponentPropsWithRef<'div'>) {
-  const {emblaApi, totalSlides, selectedIndex, onThumbDotButtonClick} =
+  const {totalSlides, selectedIndex, onThumbDotButtonClick} =
     useCarouselContext()
 
   if (totalSlides <= 1) return null
@@ -216,16 +204,19 @@ function CarouselDots({
       )}
       {...props}
     >
-      {Array.from({length: totalSlides}).map(function (_, index) {
+      {Array.from({length: totalSlides}).map((_, index) => {
+        const key = `dot-${index}`
+
         return (
           <button
-            key={index}
+            key={key}
             className={cn(
               'size-4 flex items-center justify-center bg-background border border-accent/15 rounded-full transition before:absolute before:size-1.5 before:bg-accent before:rounded-full before:scale-0 before:transition before:duration-300 hover:border-accent active:border-accent sm:size-6 sm:before:size-2.5',
               selectedIndex === index && 'border-accent before:scale-100'
             )}
             aria-label={`Go to slide ${index + 1}`}
             onClick={() => onThumbDotButtonClick(index)}
+            type='button'
           />
         )
       })}

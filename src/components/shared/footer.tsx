@@ -1,9 +1,9 @@
+import {FacebookIcon, HeartIcon, InstagramIcon, MapIcon} from 'lucide-react'
 import Link from 'next/link'
-import {FacebookIcon, InstagramIcon, HeartIcon, MapIcon} from 'lucide-react'
-import {Container} from '@/src/components/shared/container'
-import {Typography} from '@/src/components/ui/typography'
-import {Button} from '@/src/components/ui/button'
 import {WhatsAppIcon} from '@/src/components/icons/whatsapp'
+import {Container} from '@/src/components/shared/container'
+import {Button} from '@/src/components/ui/button'
+import {Typography} from '@/src/components/ui/typography'
 
 function Footer() {
   return (
@@ -35,6 +35,7 @@ function Footer() {
               <a
                 href='https://www.facebook.com/profile.php?id=61574547915058'
                 target='_blank'
+                rel='noopener'
               >
                 <FacebookIcon />
               </a>
@@ -47,6 +48,7 @@ function Footer() {
               <a
                 href='https://www.instagram.com/magnus_bnb/'
                 target='_blank'
+                rel='noopener'
               >
                 <InstagramIcon />
               </a>

@@ -1,19 +1,19 @@
 'use server'
 
 import {
+  check,
+  email,
+  flatten,
   type InferOutput,
+  maxLength,
+  minLength,
+  nonEmpty,
   object,
   pipe,
-  string,
-  trim,
-  nonEmpty,
-  minLength,
-  maxLength,
-  email,
-  check,
   regex,
   safeParse,
-  flatten
+  string,
+  trim
 } from 'valibot'
 import {sendContactForm} from '@/src/lib/send-contact-form'
 import {bannedKeywordPatterns} from '@/src/lib/utils'
@@ -34,13 +34,13 @@ const ContactFormSchema = object({
     trim(),
     nonEmpty(nonEmptyMessage),
     email('Μη έγκυρη μορφή email'),
-    check(function (input) {
-      return ['@gmail.com', '@icloud.com', '@yahoo.com'].some(
-        function (provider) {
-          return input.endsWith(provider)
-        }
-      )
-    }, 'Αποδεκτοί πάροχοι email: gmail, icloud, yahoo')
+    check(
+      (input) =>
+        ['@gmail.com', '@icloud.com', '@yahoo.com'].some((provider) =>
+          input.endsWith(provider)
+        ),
+      'Αποδεκτοί πάροχοι email: gmail, icloud, yahoo'
+    )
   ),
   phone: pipe(
     string(stringMessage),
@@ -52,11 +52,10 @@ const ContactFormSchema = object({
     string(stringMessage),
     trim(),
     nonEmpty(nonEmptyMessage),
-    check(function (input) {
-      return !bannedKeywordPatterns.some(function (pattern) {
-        return pattern.test(input)
-      })
-    }, 'Βρέθηκε ανεπιθύμητο μήνυμα. Δοκιμάστε να αναδιατυπώσετε.')
+    check(
+      (input) => !bannedKeywordPatterns.some((pattern) => pattern.test(input)),
+      'Βρέθηκε ανεπιθύμητο μήνυμα. Δοκιμάστε να αναδιατυπώσετε.'
+    )
   )
 })
 

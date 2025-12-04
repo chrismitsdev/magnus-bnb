@@ -1,10 +1,10 @@
-import {createElement} from 'react'
 import {FacebookIcon, InstagramIcon} from 'lucide-react'
+import {createElement} from 'react'
+import {WhatsAppIcon} from '@/src/components/icons/whatsapp'
 import {Container} from '@/src/components/shared/container'
 import {Section} from '@/src/components/shared/section'
-import {Typography} from '@/src/components/ui/typography'
-import {WhatsAppIcon} from '@/src/components/icons/whatsapp'
 import {InView} from '@/src/components/ui/in-view'
+import {Typography} from '@/src/components/ui/typography'
 
 const variants = {
   hidden: {y: 80, opacity: 0},

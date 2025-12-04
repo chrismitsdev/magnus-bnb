@@ -1,6 +1,6 @@
 import {Resend} from 'resend'
-import {type ContactFormActionState} from '@/src/lib/actions'
 import {EmailFormInternal} from '@/src/components/ui/email-form-internal'
+import type {ContactFormActionState} from '@/src/lib/actions'
 
 const resend = new Resend(process.env.RESEND_API_KEY)
 

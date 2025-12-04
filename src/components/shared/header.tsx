@@ -1,8 +1,8 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import logo from '@/public/images/logo.png'
 import {Container} from '@/src/components/shared/container'
 import {Typography} from '@/src/components/ui/typography'
-import logo from '@/public/images/logo.png'
 
 function Header() {
   return (

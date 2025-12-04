@@ -1,8 +1,8 @@
-import type {Metadata} from 'next'
 import {DotIcon} from 'lucide-react'
+import type {Metadata} from 'next'
+import {PrivacyPolicyHeader} from '@/src/app/privacy-policy/(components)/privacy-policy-header'
 import {Container} from '@/src/components/shared/container'
 import {Section} from '@/src/components/shared/section'
-import {PrivacyPolicyHeader} from '@/src/app/privacy-policy/(components)/privacy-policy-header'
 import {Typography} from '@/src/components/ui/typography'
 
 export const metadata: Metadata = {

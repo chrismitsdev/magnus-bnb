@@ -1,18 +1,18 @@
 'use client'
 
 import Autoplay from 'embla-carousel-autoplay'
-import {cn} from '@/src/lib/utils'
+import {carouselImageList} from '@/public/images/carousel'
 import {
   Carousel,
-  CarouselViewport,
-  CarouselSlidesContainer,
-  CarouselSlide,
-  CarouselButtonPrev,
   CarouselButtonNext,
-  CarouselDots
+  CarouselButtonPrev,
+  CarouselDots,
+  CarouselSlide,
+  CarouselSlidesContainer,
+  CarouselViewport
 } from '@/src/components/ui/carousel'
 import {CustomImage} from '@/src/components/ui/custom-image'
-import {carouselImageList} from '@/public/images/carousel'
+import {cn} from '@/src/lib/utils'
 
 function HomeCarousel() {
   return (
@@ -24,23 +24,21 @@ function HomeCarousel() {
       <section>
         <CarouselViewport>
           <CarouselSlidesContainer>
-            {carouselImageList.map(function (image, i, a) {
-              return (
-                <CarouselSlide key={image.src}>
-                  <CustomImage
-                    className={cn(
-                      'w-full h-full object-contain',
-                      i === a.length - 1 &&
-                        'max-h-[260px] object-[center_16px] sm:max-h-max sm:object-[center_64px]'
-                    )}
-                    src={image}
-                    alt={`Home page carousel image ${i + 1}`}
-                    sizes='100vw'
-                    priority={i === 0}
-                  />
-                </CarouselSlide>
-              )
-            })}
+            {carouselImageList.map((image, i, a) => (
+              <CarouselSlide key={image.src}>
+                <CustomImage
+                  className={cn(
+                    'w-full h-full object-contain',
+                    i === a.length - 1 &&
+                      'max-h-[260px] object-[center_16px] sm:max-h-max sm:object-[center_64px]'
+                  )}
+                  src={image}
+                  alt={`Home page carousel image ${i + 1}`}
+                  sizes='100vw'
+                  priority={i === 0}
+                />
+              </CarouselSlide>
+            ))}
           </CarouselSlidesContainer>
         </CarouselViewport>
         <CarouselButtonPrev />

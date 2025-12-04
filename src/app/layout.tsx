@@ -1,10 +1,10 @@
 import '@/src/styles/index.css'
-import type {Metadata} from 'next'
-import {Poppins, Playfair_Display} from 'next/font/google'
-import {Analytics} from '@vercel/analytics/next'
 import {GoogleAnalytics} from '@next/third-parties/google'
-import {Header} from '@/src/components/shared/header'
+import {Analytics} from '@vercel/analytics/next'
+import type {Metadata} from 'next'
+import {Playfair_Display, Poppins} from 'next/font/google'
 import {Footer} from '@/src/components/shared/footer'
+import {Header} from '@/src/components/shared/header'
 
 const poppins = Poppins({
   weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
@@ -31,9 +31,7 @@ export const metadata: Metadata = {
   }
 }
 
-export default function RootLayout({
-  children
-}: Readonly<React.PropsWithChildren>) {
+export default function RootLayout({children}: LayoutProps<'/'>) {
   return (
     <html
       lang='en'

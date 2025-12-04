@@ -1,7 +1,7 @@
-import {cn} from '@/src/lib/utils'
+import {BorderTrail} from '@/src/components/ui/border-trail'
 import {CustomImage} from '@/src/components/ui/custom-image'
 import {Typography} from '@/src/components/ui/typography'
-import {BorderTrail} from '@/src/components/ui/border-trail'
+import {cn} from '@/src/lib/utils'
 
 function Card({
   className,

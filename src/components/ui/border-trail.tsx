@@ -1,6 +1,6 @@
 'use client'
 
-import {type Transition, motion} from 'motion/react'
+import {motion, type Transition} from 'motion/react'
 import {cn} from '@/src/lib/utils'
 
 interface BorderTrailProps {

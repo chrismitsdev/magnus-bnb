@@ -1,9 +1,9 @@
 import {MailIcon, PhoneIcon, SmartphoneIcon} from 'lucide-react'
+import {ContactForm} from '@/src/app/(home)/(components)/home-conatct-form'
 import {Container} from '@/src/components/shared/container'
 import {Section} from '@/src/components/shared/section'
+import {Card, CardDescription, CardTitle} from '@/src/components/ui/card'
 import {Typography} from '@/src/components/ui/typography'
-import {Card, CardTitle, CardDescription} from '@/src/components/ui/card'
-import {ContactForm} from '@/src/app/(home)/(components)/home-conatct-form'
 
 function HomeContact() {
   return (

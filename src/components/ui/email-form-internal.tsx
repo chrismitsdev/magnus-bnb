@@ -1,17 +1,17 @@
 import {
-  Html,
-  Tailwind,
   Body,
-  Container,
-  Hr,
-  Section,
-  Row,
   Column,
+  Container,
   Heading,
-  Text,
-  Link
+  Hr,
+  Html,
+  Link,
+  Row,
+  Section,
+  Tailwind,
+  Text
 } from '@react-email/components'
-import {ContactFormActionState} from '@/src/lib/actions'
+import type {ContactFormActionState} from '@/src/lib/actions'
 
 function EmailFormInternal(data: Readonly<ContactFormActionState['data']>) {
   return (

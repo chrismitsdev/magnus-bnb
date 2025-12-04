@@ -1,14 +1,14 @@
+import * as servicesImages from '@/public/images/services'
 import {Container} from '@/src/components/shared/container'
 import {Section} from '@/src/components/shared/section'
-import {InView} from '@/src/components/ui/in-view'
 import {
   Card,
-  CardImage,
   CardBody,
-  CardTitle,
-  CardDescription
+  CardDescription,
+  CardImage,
+  CardTitle
 } from '@/src/components/ui/card'
-import * as servicesImages from '@/public/images/services'
+import {InView} from '@/src/components/ui/in-view'
 
 const variants = {
   hidden: {y: 80, opacity: 0},

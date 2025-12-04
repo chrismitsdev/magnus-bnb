@@ -1,8 +1,9 @@
 'use client'
 
 import dynamic from 'next/dynamic'
-const Map = dynamic(() => import('./map'), {
+
+const MagnusMap = dynamic(() => import('./map'), {
   ssr: false
 })
 
-export {Map}
+export {MagnusMap}

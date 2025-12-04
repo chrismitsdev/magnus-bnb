@@ -1,6 +1,6 @@
 import {Slot} from '@radix-ui/react-slot'
-import {cn} from '@/src/lib/utils'
 import {Typography} from '@/src/components/ui/typography'
+import {cn} from '@/src/lib/utils'
 
 interface SectionProps extends React.ComponentPropsWithRef<'section'>, AsChild {
   description?: React.ReactNode

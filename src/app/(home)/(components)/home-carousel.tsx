@@ -30,7 +30,7 @@ function HomeCarousel() {
                   className={cn(
                     'w-full h-full object-contain',
                     i === a.length - 1 &&
-                      'max-h-[260px] object-[center_16px] sm:max-h-max sm:object-[center_64px]'
+                      'max-h-65 object-[center_16px] sm:max-h-max sm:object-[center_64px]'
                   )}
                   src={image}
                   alt={`Home page carousel image ${i + 1}`}

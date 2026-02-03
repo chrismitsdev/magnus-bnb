@@ -199,7 +199,7 @@ function CarouselDots({
   return (
     <div
       className={cn(
-        'p-2 absolute bottom-0 left-0 w-full flex justify-center gap-4 sm:p-6',
+        'p-2 absolute inset-x-0 bottom-0 flex justify-center gap-4 sm:p-6',
         className
       )}
       {...props}
@@ -211,7 +211,7 @@ function CarouselDots({
           <button
             key={key}
             className={cn(
-              'size-4 flex items-center justify-center bg-background border border-accent/15 rounded-full transition before:absolute before:size-1.5 before:bg-accent before:rounded-full before:scale-0 before:transition before:duration-300 hover:border-accent active:border-accent sm:size-6 sm:before:size-2.5',
+              'size-5 flex items-center justify-center bg-background border border-accent/15 rounded-full transition before:absolute before:size-1.5 before:bg-accent before:rounded-full before:scale-0 before:transition before:duration-300 hover:border-accent active:border-accent sm:size-6 sm:before:size-2.5',
               selectedIndex === index && 'border-accent before:scale-100'
             )}
             aria-label={`Go to slide ${index + 1}`}

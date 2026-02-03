@@ -2,8 +2,6 @@
 
 Repo of the Magnus BnB website.
 
-You can take a look at the website [here](https://www.magnusbnb.com/).
-
 **Core project tools:**
 
 - [Next.js](https://nextjs.org/) as the meta-framework of choice

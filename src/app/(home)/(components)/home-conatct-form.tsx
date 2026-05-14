@@ -11,6 +11,7 @@ import {useActionState} from 'react'
 import {Button} from '@/src/components/ui/button'
 import {Input} from '@/src/components/ui/input'
 import {Textarea} from '@/src/components/ui/textarea'
+import {Typography} from '@/src/components/ui/typography'
 import {type ContactFormActionState, contactFormAction} from '@/src/lib/actions'
 
 const initialState: ContactFormActionState = {
@@ -31,58 +32,70 @@ function ContactForm() {
   )
 
   return (
-    <form
-      action={action}
-      noValidate
-    >
-      <Input
-        name='fullName'
-        autoComplete='name'
-        placeholder='Ονοματεπώνυμο'
-        defaultValue={state.data.fullName}
-        disabled={isPending}
-        error={state.errors.fullName}
-        type='text'
-        icon={UserIcon}
-      />
-      <Input
-        name='email'
-        autoComplete='email'
-        placeholder='Email'
-        defaultValue={state.data.email}
-        disabled={isPending}
-        error={state.errors.email}
-        type='email'
-        icon={MailIcon}
-      />
-      <Input
-        name='phone'
-        autoComplete='mobile tel'
-        placeholder='Αριθμός τηλεφώνου'
-        defaultValue={state.data.phone}
-        disabled={isPending}
-        error={state.errors.phone}
-        type='tel'
-        icon={PhoneIcon}
-      />
-      <Textarea
-        name='message'
-        placeholder='Το μήνυμά σας...'
-        defaultValue={state.data.message}
-        disabled={isPending}
-        error={state.errors.message}
-        icon={MessageCircleIcon}
-      />
-      <Button
-        type='submit'
-        className='w-full sm:w-auto'
-        disabled={isPending}
-        isLoading={isPending}
+    <div>
+      <form
+        action={action}
+        noValidate
       >
-        <span>Υποβολή</span>
-        <SendHorizonal className='size-5' />
-      </Button>
-    </form>
+        <Input
+          name='fullName'
+          autoComplete='name'
+          placeholder='Ονοματεπώνυμο'
+          defaultValue={state.data.fullName}
+          disabled={isPending}
+          error={state.errors.fullName}
+          type='text'
+          icon={UserIcon}
+        />
+        <Input
+          name='email'
+          autoComplete='email'
+          placeholder='Email'
+          defaultValue={state.data.email}
+          disabled={isPending}
+          error={state.errors.email}
+          type='email'
+          icon={MailIcon}
+        />
+        <Input
+          name='phone'
+          autoComplete='mobile tel'
+          placeholder='Αριθμός τηλεφώνου'
+          defaultValue={state.data.phone}
+          disabled={isPending}
+          error={state.errors.phone}
+          type='tel'
+          icon={PhoneIcon}
+        />
+        <Textarea
+          name='message'
+          placeholder='Το μήνυμά σας...'
+          defaultValue={state.data.message}
+          disabled={isPending}
+          error={state.errors.message}
+          icon={MessageCircleIcon}
+        />
+        <Button
+          type='submit'
+          className='w-full sm:w-auto'
+          disabled={isPending}
+          isLoading={isPending}
+        >
+          <span>Υποβολή</span>
+          <SendHorizonal className='size-5' />
+        </Button>
+      </form>
+      {state.ok && (
+        <div className='mt-10 p-8 bg-green-950/50 border border-green-900 text-center rounded-md'>
+          <Typography variant='small'>
+            Η φόρμα υποβλήθηκε με επιτυχία.
+          </Typography>
+          <Typography variant='small'>
+            Θα σας απαντήσουμε το συντομότερο δυνατό.
+          </Typography>
+        </div>
+      )}
+    </div>
   )
 }
 

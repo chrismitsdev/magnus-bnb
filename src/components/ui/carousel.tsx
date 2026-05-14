@@ -234,10 +234,10 @@ CarouselDots.displayName = 'CarouselDots'
 
 export {
   Carousel,
-  CarouselViewport,
-  CarouselSlidesContainer,
-  CarouselSlide,
-  CarouselButtonPrev,
   CarouselButtonNext,
-  CarouselDots
+  CarouselButtonPrev,
+  CarouselDots,
+  CarouselSlide,
+  CarouselSlidesContainer,
+  CarouselViewport
 }

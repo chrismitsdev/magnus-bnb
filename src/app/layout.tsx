@@ -41,7 +41,7 @@ export default function RootLayout({children}: LayoutProps<'/'>) {
         <Header />
         <main>{children}</main>
         <Footer />
-        <Analytics />
+        {process.env.NODE_ENV === 'production' && <Analytics />}
         <GoogleAnalytics gaId='G-GXWJNYS6ES' />
       </body>
     </html>

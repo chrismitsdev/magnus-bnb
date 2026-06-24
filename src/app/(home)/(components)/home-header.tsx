@@ -1,11 +1,5 @@
-import {VisuallyHidden} from '@/src/components/ui/visuall-hidden'
-
 function HomeHeader() {
-  return (
-    <VisuallyHidden asChild>
-      <h1>Αρχική σελίδα</h1>
-    </VisuallyHidden>
-  )
+  return <h1 className='sr-only'>Αρχική σελίδα</h1>
 }
 
 HomeHeader.displayName = 'HomeHeader'

@@ -1,11 +1,5 @@
-import {VisuallyHidden} from '@/src/components/ui/visuall-hidden'
-
 function PrivacyPolicyHeader() {
-  return (
-    <VisuallyHidden asChild>
-      <h1>Σελίδα πολιτικής απορρήτου</h1>
-    </VisuallyHidden>
-  )
+  return <h1 className='sr-only'>Σελίδα πολιτικής απορρήτου</h1>
 }
 
 PrivacyPolicyHeader.displayName = 'PrivacyPolicyHeader'

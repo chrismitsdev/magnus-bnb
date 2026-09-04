@@ -14,7 +14,7 @@
   },
   "devDependencies": {
     "@adamscybot/react-leaflet-component-marker": "^2.0.3",
-    "@biomejs/biome": "^2.5.10",
+    "@biomejs/biome": "^2.5.11",
     "@next/third-parties": "^16.3.3",
     "@radix-ui/react-slot": "^1.3.3",
     "@react-email/ui": "^6.9.3",

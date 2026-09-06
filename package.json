@@ -32,7 +32,7 @@
     "lucide-react": "0.577.0",
     "motion": "^13.2.0",
     "next": "^16.3.4",
-    "postcss": "^8.5.26",
+    "postcss": "^8.5.27",
     "react": "^19.2.8",
     "react-dom": "^19.2.8",
     "react-email": "^6.9.3",

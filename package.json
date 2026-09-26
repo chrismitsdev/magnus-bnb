@@ -15,7 +15,7 @@
   "devDependencies": {
     "@adamscybot/react-leaflet-component-marker": "^2.0.3",
     "@biomejs/biome": "^2.5.14",
-    "@next/third-parties": "^16.3.5",
+    "@next/third-parties": "^16.3.6",
     "@radix-ui/react-slot": "^1.3.3",
     "@react-email/ui": "^6.9.5",
     "@tailwindcss/postcss": "^4.3.3",
@@ -31,7 +31,7 @@
     "leaflet": "^1.9.4",
     "lucide-react": "0.577.0",
     "motion": "^13.4.1",
-    "next": "^16.3.5",
+    "next": "^16.3.6",
     "postcss": "^8.5.28",
     "react": "^19.3.0",
     "react-dom": "^19.3.0",
